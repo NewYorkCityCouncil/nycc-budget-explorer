@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html class="no-js">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Force IE to use the latest rendering engine available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Council Labs styles -->
+    <link rel="shortcut icon" href="http://labs.council.nyc/budget/wp-content/themes/wp-nycc/favicon.ico" />
+    <link rel="stylesheet"  href="http://labs.council.nyc/budget/wp-content/themes/wp-nycc/assets/css/app.min.css?ver=4.5.3" type="text/css" media="all" />
+
+    <link rel="stylesheet"  href="assets/css/app.min.css" type="text/css" media="all" />
+
+  </head>
+
+  <body>
+
+    <div id="sticky-wrapper">
+      <div data-sticky-container>
+        <header class="site-header sticky" role="banner" data-sticky data-margin-top="0" data-sticky-on="small" data-anchor="sticky-wrapper">
+          <div class="top-bar">
+            <div class="row">
+              <div class="columns">
+                <div class="top-bar-title">
+                  <strong class="site-logo"><a href="#"><img src="http://labs.council.nyc/budget/wp-content/themes/wp-nycc/assets/images/nycc-seal.png">New York City Council</a> <em class="app-title">Budget&nbsp;Explorer</em></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="site-container">
+        <div id="translation-menu" class="row column text-right">
+          <button data-toggle="translation-menu-dropdown" class="button"><span class="show-for-sr">Translate this page</span></button>
+          <div class="dropdown-pane" id="translation-menu-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+            <div id="google_translate_element"><span class="show-for-sr">Google Translate</span></div>
+            <script type="text/javascript">
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT}, 'google_translate_element');
+              }
+            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns">
+
+            <h1 class="header-large">New York City runs on billions of dollars. How public funds are distributed affects our City's operations, services, construction, and so much more. See how&hellip;</h1>
+
+            <div id="budget-filters">
+              <div class="row">
+                <div class="columns medium-6">
+                  <p><label>Filter the budget items by&hellip;</label></p>
+                  <select class="budget-filter" id="budget-filter--agency">
+                    <option value="">All Agencies</option>
+                  </select>
+                  <select class="budget-filter" id="budget-filter--category">
+                    <option value="">All Classes</option>
+                  </select>
+                </div>
+                <div class="columns medium-6">
+                  <p><label>Category Key:</label></p>
+                  <ul id="budget-filter--key" class="no-bullet"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="budget-items"></div>
+
+          </div>
+        </div>
+
+      </div><!-- #site-container -->
+    </div><!-- #sticky-wrapper -->
+
+    <!-- Council Labs scripts -->
+    <script type="text/javascript" src="http://labs.council.nyc/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+    <script type="text/javascript" src="http://labs.council.nyc/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+    <script type="text/javascript" src="http://labs.council.nyc/wp-content/themes/wp-nycc/assets/js/foundation.min.js?ver=6.2"></script>
+    <script type="text/javascript" src="http://labs.council.nyc/wp-content/themes/wp-nycc/assets/js/scripts.min.js?ver=4.6.1"></script>
+
+    <!-- app scripts -->
+    <script src="assets/js/scripts.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,85 @@
+.app-title {
+  font-weight: normal;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  display: inline-block;
+  margin-bottom: 1rem;
+  @media screen and (min-width:40em) {
+  }
+  @media screen and (min-width: 64em) {
+  }
+}
+
+#budget-filters {
+  background-color: #f7f7f7;
+  padding: 1rem 1rem 0;
+  margin: 0 0 1.5rem;
+  border: 1px solid #ddd;
+}
+#budget-filter--agency {}
+#budget-filter--category {}
+
+#budget-items {
+  margin: 0 -0.5rem 1rem;
+}
+
+.budget-item {
+  width: 50%;
+  padding: 0 0.5rem 0;
+  margin: 0 0 1rem;
+  @media screen and (min-width:40em) {
+    width: 33.333%;
+  }
+  @media screen and (min-width:64em) {
+    width: 20%;
+  }
+  .size {
+    background-color: #f7f7f7;
+    border-top: 1px solid #43AC6A;
+    line-height: 1.2;
+  }
+  span {
+    padding: 0.25rem 0.375rem 0;
+    display: block;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  .dollar-ammount {
+  }
+  .agency {
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  .category {
+    font-size: 0.625rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.amounts-to-be-scheduled .size { border-top-color: HotPink; }
+.charges-services-and-expenses .size { border-top-color: BlueViolet; }
+.contractual-services .size { border-top-color: Gold; }
+.otps-holding-codes .size { border-top-color: Red; }
+.pay-and-fringe-benefits .size { border-top-color: DodgerBlue; }
+.property-equipment-and-supplies .size { border-top-color: Green; }
+.social-services .size { border-top-color: Orange; }
+.transfers-for-debt-service .size { border-top-color: Sienna; }
+
+#budget-filter--key {
+  line-height: 1;
+  li {
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0;
+  }
+  .label {
+    font-size: 0.75rem;
+  }
+}
+.label.amounts-to-be-scheduled { background-color: HotPink; color: White; }
+.label.charges-services-and-expenses { background-color: BlueViolet; color: White; }
+.label.contractual-services { background-color: Gold; color: #333; }
+.label.otps-holding-codes { background-color: Red; color: White; }
+.label.pay-and-fringe-benefits { background-color: DodgerBlue; color: White; }
+.label.property-equipment-and-supplies { background-color: Green; color: White; }
+.label.social-services { background-color: Orange; color: #333; }
+.label.transfers-for-debt-service { background-color: Sienna; color: White; }
