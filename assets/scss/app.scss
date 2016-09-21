@@ -1,3 +1,20 @@
+$red: #d05d4e;
+$orange: #FFB716;
+$yellow: #EFDB1D;
+$green: #43AC6A;
+$blue: #2f56a6;
+$indigo: #7E73E5;
+$violet: #A24993;
+$brown: #A07952;
+
+$white: #fff;
+$off-white: #f9f9f9;
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$gray: #8a8a8a;
+$dark-gray: #666;
+$black: #222;
+
 .app-title {
   font-weight: normal;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
@@ -56,14 +73,14 @@
   }
 }
 
-.amounts-to-be-scheduled .size { border-top-color: HotPink; }
-.charges-services-and-expenses .size { border-top-color: BlueViolet; }
-.contractual-services .size { border-top-color: Gold; }
-.otps-holding-codes .size { border-top-color: Red; }
-.pay-and-fringe-benefits .size { border-top-color: DodgerBlue; }
-.property-equipment-and-supplies .size { border-top-color: Green; }
-.social-services .size { border-top-color: Orange; }
-.transfers-for-debt-service .size { border-top-color: Sienna; }
+.amounts-to-be-scheduled .size { border-top-color: $red; }
+.charges-services-and-expenses .size { border-top-color: $orange; }
+.otps-holding-codes .size { border-top-color: $yellow; }
+.contractual-services .size { border-top-color: $green; }
+.pay-and-fringe-benefits .size { border-top-color: $blue; }
+.property-equipment-and-supplies .size { border-top-color: $indigo; }
+.social-services .size { border-top-color: $violet; }
+.transfers-for-debt-service .size { border-top-color: $brown; }
 
 #budget-filter--key {
   line-height: 1;
@@ -75,11 +92,11 @@
     font-size: 0.75rem;
   }
 }
-.label.amounts-to-be-scheduled { background-color: HotPink; color: White; }
-.label.charges-services-and-expenses { background-color: BlueViolet; color: White; }
-.label.contractual-services { background-color: Gold; color: #333; }
-.label.otps-holding-codes { background-color: Red; color: White; }
-.label.pay-and-fringe-benefits { background-color: DodgerBlue; color: White; }
-.label.property-equipment-and-supplies { background-color: Green; color: White; }
-.label.social-services { background-color: Orange; color: #333; }
-.label.transfers-for-debt-service { background-color: Sienna; color: White; }
+.label.amounts-to-be-scheduled { background-color: $red; color: $white; }
+.label.charges-services-and-expenses { background-color: $orange; color: $black; }
+.label.otps-holding-codes { background-color: $yellow; color: $black; }
+.label.contractual-services { background-color: $green; color: $white; }
+.label.pay-and-fringe-benefits { background-color: $blue; color: $white; }
+.label.property-equipment-and-supplies { background-color: $indigo; color: $white; }
+.label.social-services { background-color: $violet; color: $white; }
+.label.transfers-for-debt-service { background-color: $brown; color: $white; }

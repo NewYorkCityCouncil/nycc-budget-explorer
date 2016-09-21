@@ -41,28 +41,28 @@
     border-bottom: 1px solid #ddd; }
 
 .amounts-to-be-scheduled .size {
-  border-top-color: HotPink; }
+  border-top-color: #d05d4e; }
 
 .charges-services-and-expenses .size {
-  border-top-color: BlueViolet; }
-
-.contractual-services .size {
-  border-top-color: Gold; }
+  border-top-color: #FFB716; }
 
 .otps-holding-codes .size {
-  border-top-color: Red; }
+  border-top-color: #EFDB1D; }
+
+.contractual-services .size {
+  border-top-color: #43AC6A; }
 
 .pay-and-fringe-benefits .size {
-  border-top-color: DodgerBlue; }
+  border-top-color: #2f56a6; }
 
 .property-equipment-and-supplies .size {
-  border-top-color: Green; }
+  border-top-color: #7E73E5; }
 
 .social-services .size {
-  border-top-color: Orange; }
+  border-top-color: #A24993; }
 
 .transfers-for-debt-service .size {
-  border-top-color: Sienna; }
+  border-top-color: #A07952; }
 
 #budget-filter--key {
   line-height: 1; }
@@ -73,33 +73,33 @@
     font-size: 0.75rem; }
 
 .label.amounts-to-be-scheduled {
-  background-color: HotPink;
-  color: White; }
+  background-color: #d05d4e;
+  color: #fff; }
 
 .label.charges-services-and-expenses {
-  background-color: BlueViolet;
-  color: White; }
-
-.label.contractual-services {
-  background-color: Gold;
-  color: #333; }
+  background-color: #FFB716;
+  color: #222; }
 
 .label.otps-holding-codes {
-  background-color: Red;
-  color: White; }
+  background-color: #EFDB1D;
+  color: #222; }
+
+.label.contractual-services {
+  background-color: #43AC6A;
+  color: #fff; }
 
 .label.pay-and-fringe-benefits {
-  background-color: DodgerBlue;
-  color: White; }
+  background-color: #2f56a6;
+  color: #fff; }
 
 .label.property-equipment-and-supplies {
-  background-color: Green;
-  color: White; }
+  background-color: #7E73E5;
+  color: #fff; }
 
 .label.social-services {
-  background-color: Orange;
-  color: #333; }
+  background-color: #A24993;
+  color: #fff; }
 
 .label.transfers-for-debt-service {
-  background-color: Sienna;
-  color: White; }
+  background-color: #A07952;
+  color: #fff; }
