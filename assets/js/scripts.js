@@ -638,12 +638,12 @@ jQuery(document).ready(function($) {
   // render the filters
   for (var agencyName in budgetSummary.agencies) {
     if (budgetSummary.agencies.hasOwnProperty(agencyName)) {
-       $('#budget-filter--agency').append( '<option value=".' + slugify(agencyName) + '">' + agencyName + '</option>');
+       $('#budget-filter--agency').append( '<option value=".' + slugify(agencyName) + '">' + capitalizeMe(agencyName) + '</option>');
      }
   }
   for (var className in budgetSummary.classes) {
     if (budgetSummary.classes.hasOwnProperty(className)) {
-      $('#budget-filter--category').append( '<option value=".' + slugify(className) + '">' + className + '</option>');
+      $('#budget-filter--category').append( '<option value=".' + slugify(className) + '">' + capitalizeMe(className) + '</option>');
       $('#budget-filter--key').append( '<li><span class="label ' + slugify(className) + '">' + capitalizeMe(className) + '</span></li>');
     }
   }
