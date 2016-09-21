@@ -43,7 +43,7 @@
 .amounts-to-be-scheduled .size {
   border-top-color: #d05d4e; }
 
-.charges-services-and-expenses .size {
+.charges-services-expenses .size {
   border-top-color: #FFB716; }
 
 .otps-holding-codes .size {
@@ -52,10 +52,10 @@
 .contractual-services .size {
   border-top-color: #43AC6A; }
 
-.pay-and-fringe-benefits .size {
+.pay-fringe-benefits .size {
   border-top-color: #2f56a6; }
 
-.property-equipment-and-supplies .size {
+.property-equipment-supplies .size {
   border-top-color: #7E73E5; }
 
 .social-services .size {
@@ -76,7 +76,7 @@
   background-color: #d05d4e;
   color: #fff; }
 
-.label.charges-services-and-expenses {
+.label.charges-services-expenses {
   background-color: #FFB716;
   color: #222; }
 
@@ -88,11 +88,11 @@
   background-color: #43AC6A;
   color: #fff; }
 
-.label.pay-and-fringe-benefits {
+.label.pay-fringe-benefits {
   background-color: #2f56a6;
   color: #fff; }
 
-.label.property-equipment-and-supplies {
+.label.property-equipment-supplies {
   background-color: #7E73E5;
   color: #fff; }
 

@@ -13,11 +13,11 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
 var budgetSummary = {
   "classes": {
     "AMOUNTS TO BE SCHEDULED": ["05"],
-    "Charges, Services and Expenses": ["70","07","40"],
+    "Charges, Services, Expenses": ["70","07","40"],
     "CONTRACTUAL SERVICES": ["60"],
     "OTPS HOLDING CODES": ["90"],
-    "Pay and Fringe Benefits": ["04","06","01","02","03"],
-    "Property, Equipment, and Supplies": ["30","10"],
+    "Pay, Fringe Benefits": ["04","06","01","02","03"],
+    "Property, Equipment, Supplies": ["30","10"],
     "SOCIAL SERVICES": ["50"],
     "TRANSFERS FOR DEBT SERVICE": ["80"],
   },
