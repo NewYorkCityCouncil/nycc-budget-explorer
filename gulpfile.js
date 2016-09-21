@@ -44,3 +44,10 @@ gulp.task('watch', function() {
   gulp.watch('./assets/scss/*.scss', ['styles']);
   gulp.watch('./assets/scripts/*.js', ['scripts']);
 });
+
+// Download the Budget OpenData
+var request = require('request');
+var fs = require('fs');
+gulp.task('data', function () {
+  return request('https://data.cityofnewyork.us/resource/66mb-ky9b.json?').pipe(fs.createWriteStream('./assets/data/66mb-ky9b.json'));
+});

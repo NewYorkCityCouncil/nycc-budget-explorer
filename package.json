@@ -18,6 +18,7 @@
     "gulp-sass": "^2.1.0",
     "gulp-uglify": "^1.5.2",
     "gulp-util": "^3.0.7",
-    "isotope-layout": "^3.0.1"
+    "isotope-layout": "^3.0.1",
+    "request": "^2.75.0"
   }
 }
