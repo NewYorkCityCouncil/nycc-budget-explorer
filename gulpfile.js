@@ -49,5 +49,5 @@ gulp.task('watch', function() {
 var request = require('request');
 var fs = require('fs');
 gulp.task('data', function () {
-  return request('https://data.cityofnewyork.us/resource/66mb-ky9b.json?').pipe(fs.createWriteStream('./assets/data/66mb-ky9b.json'));
+  return request('https://data.cityofnewyork.us/resource/66mb-ky9b.json?$select=fiscal_year,agency_number,budget_code_number,object_class_number,object_code,unit_appropriation_number,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615').pipe(fs.createWriteStream('./assets/data/66mb-ky9b.json'));
 });
