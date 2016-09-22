@@ -45,9 +45,32 @@ gulp.task('watch', function() {
   gulp.watch('./assets/scripts/*.js', ['scripts']);
 });
 
-// Download the Budget OpenData
-var request = require('request');
-var fs = require('fs');
+// Download the open data and group items with matching agency_number & budget_code_number
 gulp.task('data', function () {
-  return request('https://data.cityofnewyork.us/resource/66mb-ky9b.json?$select=fiscal_year,agency_number,budget_code_number,object_class_number,object_code,unit_appropriation_number,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615').pipe(fs.createWriteStream('./assets/data/66mb-ky9b.json'));
+  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,budget_code_number,object_class_number,object_code,unit_appropriation_number,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615'], {
+        base: 'https://data.cityofnewyork.us/resource/'
+    })
+  .pipe(plugins.jsonEditor(function(json){
+    // http://codereview.stackexchange.com/questions/37028/grouping-elements-in-array-by-multiple-properties
+    function groupBy(array,f){
+      var groups = {};
+      array.forEach(function(o){
+        var group = JSON.stringify(f(o));
+        groups[group] = groups[group] || [];
+        groups[group].push(o);
+      });
+      return Object.keys(groups).map(function(group){
+        return groups[group];
+      });
+    }
+    var result = groupBy(json,function(item){
+      return [
+        item.agency_number,
+        item.budget_code_number
+      ];
+    });
+    return result;
+  }))
+  .pipe(plugins.rename('66mb-ky9b.json'))
+  .pipe(gulp.dest('./assets/data'))
 });
