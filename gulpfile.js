@@ -4,6 +4,7 @@ var gulp = require('gulp'),
         pattern: ['gulp-*', 'gulp.*'],
         replaceString: /\bgulp[\-.]/
     });
+var fs = require('fs');
 
 // Compile, autoprefix, minify SASS
 gulp.task('styles', function() {
@@ -47,26 +48,27 @@ gulp.task('watch', function() {
 
 // Download the open data
 gulp.task('data', function() {
-  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,budget_code_number,object_class_number,object_code,unit_appropriation_number,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615'], {
+  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_code,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615'], {
       base: 'https://data.cityofnewyork.us/resource/'
   })
   .pipe(plugins.jsonEditor(function(json){
 
-    function replaceByValue(field) {
+    // Function to replace agency_number with agency name
+    function combineAgencies(field) {
       for( var k = 0; k < json.length; ++k ) {
         var agencyID = json[k][field];
-        if( ['068'] == agencyID ) { json[k][field] = "ADMIN FOR CHILDREN'S SERVICES";}
-        if( ['073'] == agencyID ) { json[k][field] = "BOARD OF CORRECTION";}
-        if( ['003'] == agencyID ) { json[k][field] = "BOARD OF ELECTIONS";}
-        if( ['829'] == agencyID ) { json[k][field] = "BUSINESS INTEGRITY COMMISSION";}
-        if( ['010','011','012','013','014'] == agencyID ) { json[k][field] = "BOROUGH PRESIDENT";}
-        if( ['004'] == agencyID ) { json[k][field] = "CAMPAIGN FINANCE BOARD";}
-        if( ['103'] == agencyID ) { json[k][field] = "CITY CLERK";}
-        if( ['102'] == agencyID ) { json[k][field] = "CITY COUNCIL";}
-        if( ['042'] == agencyID ) { json[k][field] = "CITY UNIVERSITY OF NEW YORK";}
-        if( ['134'] == agencyID ) { json[k][field] = 'CIVIL SERVICE COMMISSION';}
-        if( ['054'] == agencyID ) { json[k][field] = 'CIVILIAN COMPLAINT REVIEW BOARD';}
-        if( ['226'] == agencyID ) { json[k][field] = 'COMMISSION ON HUMAN RIGHTS';}
+        if( ['068'].indexOf(agencyID) != -1 ) { json[k][field] = "ADMIN FOR CHILDREN'S SERVICES";}
+        if( ['073'].indexOf(agencyID) != -1 ) { json[k][field] = "BOARD OF CORRECTION";}
+        if( ['003'].indexOf(agencyID) != -1 ) { json[k][field] = "BOARD OF ELECTIONS";}
+        if( ['829'].indexOf(agencyID) != -1 ) { json[k][field] = "BUSINESS INTEGRITY COMMISSION";}
+        if( ['010','011','012','013','014'].indexOf(agencyID) != -1 ) { json[k][field] = "BOROUGH PRESIDENT";}
+        if( ['004'].indexOf(agencyID) != -1 ) { json[k][field] = "CAMPAIGN FINANCE BOARD";}
+        if( ['103'].indexOf(agencyID) != -1 ) { json[k][field] = "CITY CLERK";}
+        if( ['102'].indexOf(agencyID) != -1 ) { json[k][field] = "CITY COUNCIL";}
+        if( ['042'].indexOf(agencyID) != -1 ) { json[k][field] = "CITY UNIVERSITY OF NEW YORK";}
+        if( ['134'].indexOf(agencyID) != -1 ) { json[k][field] = 'CIVIL SERVICE COMMISSION';}
+        if( ['054'].indexOf(agencyID) != -1 ) { json[k][field] = 'CIVILIAN COMPLAINT REVIEW BOARD';}
+        if( ['226'].indexOf(agencyID) != -1 ) { json[k][field] = 'COMMISSION ON HUMAN RIGHTS';}
         if( ['341','342','343','344','345','346','347','348','349','350','351','352','381',
           '382','383','384','385','386','387','388','389','390','391','392','431','432','433',
           '434','435','436','437','438','439','440','441','442','443','444','471','472','473',
@@ -126,7 +128,24 @@ gulp.task('data', function() {
       }
       return json;
     }
-    var renamedAgencies = replaceByValue('agency_number');
+    json = combineAgencies('agency_number');
+
+    // Function to replace object_class_number with class name
+    function combineClasses(field) {
+      for( var k = 0; k < json.length; ++k ) {
+        var object_class_number = json[k][field];
+        if( ['05'].indexOf(object_class_number) != -1 ) { json[k][field] = "AMOUNTS TO BE SCHEDULED";}
+        if( ['70','07','40'].indexOf(object_class_number) != -1 ) { json[k][field] = "Charges, Services, Expenses";}
+        if( ['60'].indexOf(object_class_number) != -1 ) { json[k][field] = "CONTRACTUAL SERVICES";}
+        if( ['90'].indexOf(object_class_number) != -1 ) { json[k][field] = "OTPS";}
+        if( ['04','06','01','02','03'].indexOf(object_class_number) != -1 ) { json[k][field] = "Pay, Fringe Benefits";}
+        if( ['30','10'].indexOf(object_class_number) != -1 ) { json[k][field] = "Property, Equipment, Supplies";}
+        if( ['50'].indexOf(object_class_number) != -1 ) { json[k][field] = "SOCIAL SERVICES";}
+        if( ['80'].indexOf(object_class_number) != -1 ) { json[k][field] = "TRANSFERS FOR DEBT SERVICE";}
+      }
+      return json;
+    }
+    json = combineClasses('object_class_number');
 
     // Group items with matching agency_number & budget_code_number
     // http://codereview.stackexchange.com/questions/37028/grouping-elements-in-array-by-multiple-properties
@@ -141,10 +160,10 @@ gulp.task('data', function() {
         return groups[group];
       });
     }
-    var summary = groupBy(renamedAgencies,function(item){
+    var summary = groupBy(json,function(item){
       return [
         item.agency_number,
-        item.budget_code_number
+        item.object_class_number
       ];
     });
     return summary;
@@ -152,4 +171,45 @@ gulp.task('data', function() {
   }))
   .pipe(plugins.rename('66mb-ky9b.json'))
   .pipe(gulp.dest('./assets/data/'))
+});
+
+// Write HTML files from the open data
+gulp.task('html', function() {
+  return gulp.src([
+    './assets/data/66mb-ky9b.json'
+  ])
+  .pipe(plugins.jsonEditor(function(json){
+    for( var k = 0; k < json.length; ++k ) {
+
+      var objectData = '';
+      var totalCost = 0;
+
+      // var objectData = objectData + JSON.stringify(json[k][0]);
+      for( var i = 0; i < json[k].length; ++i ) {
+        var dollarAmmount = parseInt(json[k][i].financial_plan_amount);
+        totalCost = totalCost + dollarAmmount;
+        var objectData = objectData
+          + '<p>'
+            + json[k][i].object_code + '<br>'
+            + '$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+          + '</p>\n'
+        ;
+      }
+
+      objectData =
+        '<html>\n<h1>Total: $' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h1>\n'
+        + '<p>'
+          + json[k][0].agency_number + '<br>'
+          + json[k][0].object_class_number + '<br>'
+          + objectData
+        + '</p>\n'
+        + '</html>'
+      ;
+
+      // TODO: Should all the HTML files be deleted before writing new ones (to prevent extras)?
+      fs.writeFile('./assets/html/group-' + k + '.html', objectData);
+
+    }
+    return json;
+  }))
 });
