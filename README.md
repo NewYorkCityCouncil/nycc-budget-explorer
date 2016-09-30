@@ -11,7 +11,7 @@ A web app for exploring the details of NYC's budget.
 
 + Run `npm install` to get `node_modules`
 + Run `gulp data` to download the budget JSON (ignored by Git)
-+ Run `gulp html` to write a file for each group of budget items
++ Run `gulp summary` to write `summary.json` and an HTML file for each group of budget items
 + Run `gulp` to compile the CSS & JavaScript
 + Run `gulp watch` to watch for changes to `.sass` and `.js` files
 

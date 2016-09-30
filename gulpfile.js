@@ -160,34 +160,42 @@ gulp.task('data', function() {
         return groups[group];
       });
     }
-    var summary = groupBy(json,function(item){
+    var groupedData = groupBy(json,function(item){
       return [
         item.agency_number,
         item.object_class_number
       ];
     });
-    return summary;
+    return groupedData;
 
   }))
   .pipe(plugins.rename('66mb-ky9b.json'))
   .pipe(gulp.dest('./assets/data/'))
 });
 
-// Write HTML files from the open data
-gulp.task('html', function() {
+// Write summary JSON file and HTML files for groups
+gulp.task('summary', function() {
   return gulp.src([
     './assets/data/66mb-ky9b.json'
   ])
   .pipe(plugins.jsonEditor(function(json){
+
+    var summary = [];
+
+    // Loop through the groups of budget items
     for( var k = 0; k < json.length; ++k ) {
 
+      // Set variables for the group
       var objectData = '';
       var totalCost = 0;
 
-      // var objectData = objectData + JSON.stringify(json[k][0]);
+      // Loop through the budget items in the group
       for( var i = 0; i < json[k].length; ++i ) {
-        var dollarAmmount = parseInt(json[k][i].financial_plan_amount);
-        totalCost = totalCost + dollarAmmount;
+
+        var dollarAmmount = parseInt(json[k][i].financial_plan_amount); // Make the value an integer
+        totalCost = totalCost + dollarAmmount; // Add each item to the group total
+
+        // Combine all the group's items
         var objectData = objectData
           + '<p>'
             + json[k][i].object_code + '<br>'
@@ -196,6 +204,7 @@ gulp.task('html', function() {
         ;
       }
 
+      // Write the HTML for the grouped items
       objectData =
         '<html>\n<h1>Total: $' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h1>\n'
         + '<p>'
@@ -209,7 +218,19 @@ gulp.task('html', function() {
       // TODO: Should all the HTML files be deleted before writing new ones (to prevent extras)?
       fs.writeFile('./assets/html/group-' + k + '.html', objectData);
 
+      // Set the sumary items for the group
+      var groupSummary = new Object();
+          groupSummary['agency'] = json[k][0].agency_number;
+          groupSummary['class'] = json[k][0].object_class_number;
+          groupSummary['amount'] = totalCost;
+
+      summary.push(groupSummary);
+
     }
-    return json;
+
+    return summary;
+
   }))
+  .pipe(plugins.rename('summary.json'))
+  .pipe(gulp.dest('./assets/data/'))
 });
