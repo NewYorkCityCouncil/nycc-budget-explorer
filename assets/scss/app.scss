@@ -108,3 +108,10 @@ $black: #222;
 .label.property-equipment-supplies { background-color: $indigo; color: $white; }
 .label.social-services { background-color: $violet; color: $white; }
 .label.transfers-for-debt-service { background-color: $brown; color: $white; }
+
+.budget-line-item {
+  border-top: 1px solid $light-gray;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+}

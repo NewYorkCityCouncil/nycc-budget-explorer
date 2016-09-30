@@ -108,3 +108,9 @@
 .label.transfers-for-debt-service {
   background-color: #A07952;
   color: #fff; }
+
+.budget-line-item {
+  border-top: 1px solid #e6e6e6;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-transform: uppercase; }

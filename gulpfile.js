@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 
 // Download the open data
 gulp.task('data', function() {
-  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_code,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615'], {
+  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615'], {
       base: 'https://data.cityofnewyork.us/resource/'
   })
   .pipe(plugins.jsonEditor(function(json){
@@ -196,10 +196,12 @@ gulp.task('summary', function() {
 
         // Combine all the group's items
         var objectData = objectData
-          + '<p class="text-small">'
-            + '<strong>$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + ':</strong> '
-            + json[k][i].object_code
-          + '</p>\n'
+          + '<p class="budget-line-item">'
+            + '<strong>$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</strong> &ndash; <small>'
+            + json[k][i].budget_code_name + ', '
+            + json[k][i].object_class_name + ', '
+            + json[k][i].object_code_name
+          + '</small></p>\n'
         ;
       }
 
@@ -210,7 +212,6 @@ gulp.task('summary', function() {
           + '<strong>' + json[k][0].agency_number + '</strong><br>'
           + '<small>' + json[k][0].object_class_number + '</small>'
         + '</h4>'
-        + '<hr>'
         + '<p>'
           + objectData
         + '</p>\n'
