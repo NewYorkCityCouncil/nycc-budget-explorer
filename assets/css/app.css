@@ -28,6 +28,7 @@
     .budget-item {
       width: 20%; } }
   .budget-item .size {
+    cursor: pointer;
     background-color: #f7f7f7;
     border-top: 1px solid #43AC6A;
     line-height: 1.2; }

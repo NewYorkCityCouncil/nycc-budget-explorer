@@ -196,9 +196,9 @@ gulp.task('summary', function() {
 
         // Combine all the group's items
         var objectData = objectData
-          + '<p>'
-            + json[k][i].object_code + '<br>'
-            + '$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+          + '<p class="text-small">'
+            + '<strong>$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + ':</strong> '
+            + json[k][i].object_code
           + '</p>\n'
         ;
       }
@@ -207,9 +207,10 @@ gulp.task('summary', function() {
       objectData =
         '<html><body>\n<h3 class="header-xlarge">$' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h3>\n'
         + '<h4 class="header-medium sans-serif">'
-          + json[k][0].agency_number + '<br>'
+          + '<strong>' + json[k][0].agency_number + '</strong><br>'
           + '<small>' + json[k][0].object_class_number + '</small>'
         + '</h4>'
+        + '<hr>'
         + '<p>'
           + objectData
         + '</p>\n'
