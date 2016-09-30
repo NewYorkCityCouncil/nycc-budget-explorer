@@ -205,13 +205,13 @@ gulp.task('summary', function() {
 
       // Write the HTML for the grouped items
       objectData =
-        '<html>\n<h1>Total: $' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h1>\n'
+        '<html><body>\n<h1>Total: $' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h1>\n'
         + '<p>'
           + json[k][0].agency_number + '<br>'
           + json[k][0].object_class_number + '<br>'
           + objectData
         + '</p>\n'
-        + '</html>'
+        + '</body></html>'
       ;
 
       // TODO: Should all the HTML files be deleted before writing new ones (to prevent extras)?

@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
       // render budget items
       var size = Math.sqrt(val.amount / 10000);
       if(size < 1) { size = 1;}
-      $('#budget-items').append('<div class="budget-item ' + agencySlug + ' ' + categorySlug + '" data-amount="' + val.amount + '" data-agency="' + agencySlug + '" data-category="' + categorySlug + '"><div class="size" style="border-top-width:' + size + 'px;"><span class="dollar-ammount">$' + val.amount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</span> <span class="agency">' + agencyName + '</span> <span class="category">' + categoryName + '</span> </div></div>');
+      $('#budget-items').append('<div class="budget-item ' + agencySlug + ' ' + categorySlug + '" data-amount="' + val.amount + '" data-agency="' + agencySlug + '" data-category="' + categorySlug + '" data-html-key="' + key + '"><div class="size" style="border-top-width:' + size + 'px;"><span class="dollar-ammount">$' + val.amount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</span> <span class="agency">' + agencyName + '</span> <span class="category">' + categoryName + '</span> </div></div>');
 
       agencyList.push(val.agency);
       categoryList.push(val.class);
@@ -107,6 +107,26 @@ jQuery(document).ready(function($) {
       var filterCategory = $('#budget-filter--category').val();
       filterValue = filterAgency + filterCategory;
       $grid.isotope({ filter: filterValue });
+    });
+
+    // Open the details modal
+    $( ".budget-item" ).click(function() {
+
+      var key = $(this).attr('data-html-key'),
+          $modal = $('#modal');
+
+      $.ajax({
+        url: 'assets/html/group-' + key + '.html',
+        context: document.body,
+        dataType: 'html'
+      })
+      .fail(function() {
+        alert( "error" );
+      })
+      .done(function(resp) {
+        $modal.html(resp).foundation('open');
+      });
+
     });
 
   });
