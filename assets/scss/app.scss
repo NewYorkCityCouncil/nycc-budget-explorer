@@ -26,6 +26,13 @@ $black: #222;
   }
 }
 
+// Prevent the XXL two-column layout (map on side)
+#sticky-wrapper {
+  @media screen and (min-width: 90em) {
+    width: 100%;
+  }
+}
+
 #budget-filters {
   background-color: #f7f7f7;
   padding: 1rem 1rem 0;

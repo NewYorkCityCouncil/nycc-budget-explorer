@@ -4,6 +4,10 @@
   display: inline-block;
   margin-bottom: 1rem; }
 
+@media screen and (min-width: 90em) {
+  #sticky-wrapper {
+    width: 100%; } }
+
 #budget-filters {
   background-color: #f7f7f7;
   padding: 1rem 1rem 0;
