@@ -24,7 +24,6 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   return gulp.src([
     './node_modules/isotope-layout/dist/isotope.pkgd.min.js',
-    './assets/data/summary.js',
     './assets/scripts/app.js'
   ])
   .pipe(plugins.concat('scripts.js'))
