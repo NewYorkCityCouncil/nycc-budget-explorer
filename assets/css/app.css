@@ -46,7 +46,7 @@
 .charges-services-expenses .size {
   border-top-color: #FFB716; }
 
-.otps-holding-codes .size {
+.otps .size {
   border-top-color: #EFDB1D; }
 
 .contractual-services .size {
@@ -80,7 +80,7 @@
   background-color: #FFB716;
   color: #222; }
 
-.label.otps-holding-codes {
+.label.otps {
   background-color: #EFDB1D;
   color: #222; }
 
