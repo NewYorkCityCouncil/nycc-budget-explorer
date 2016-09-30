@@ -8,17 +8,6 @@ function slugify(text){
     .replace(/-+$/, '');            // Trim - from end of text
 }
 
-// Change text string to title case
-function capitalizeMe(str){
-  var noCaps = ['of','a','the','and','an','am','or','nor','but','is','if','then', 'else','when','at','from','by','on','off','for','in','out','to','into','with'];
-  return str.replace(/\w\S*/g, function(txt, offset){
-      if(offset != 0 && noCaps.indexOf(txt.toLowerCase()) != -1){
-          return txt.toLowerCase();
-      }
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-}
-
 // Get unique values in an array
 Array.prototype.contains = function(v) {
     for(var i = 0; i < this.length; i++) {
@@ -47,8 +36,8 @@ jQuery(document).ready(function($) {
       // slugify the agency and category
       var agencySlug = slugify(val.agency);
       var categorySlug = slugify(val.class);
-      var agencyName = capitalizeMe(val.agency);
-      var categoryName = capitalizeMe(val.class);
+      var agencyName = val.agency;
+      var categoryName = val.class;
 
       // render budget items
       var size = Math.sqrt(val.amount / 10000);
@@ -82,11 +71,11 @@ jQuery(document).ready(function($) {
 
     // render the filters
     $.each( uniqueAgencies, function( i, val ) {
-      $('#budget-filter--agency').append( '<option value=".' + slugify(val) + '">' + capitalizeMe(val) + '</option>');
+      $('#budget-filter--agency').append( '<option value=".' + slugify(val) + '">' + val + '</option>');
     });
     $.each( uniqueCategories, function( i, val ) {
-      $('#budget-filter--category').append( '<option value=".' + slugify(val) + '">' + capitalizeMe(val) + '</option>');
-      $('#budget-filter--key').append( '<li><span class="label ' + slugify(val) + '">' + capitalizeMe(val) + '</span></li>');
+      $('#budget-filter--category').append( '<option value=".' + slugify(val) + '">' + val + '</option>');
+      $('#budget-filter--key').append( '<li><span class="label ' + slugify(val) + '">' + val + '</span></li>');
     });
 
     // filter functions
@@ -112,7 +101,8 @@ jQuery(document).ready(function($) {
         alert( "error" );
       })
       .done(function(resp) {
-        $modal.html(resp).foundation('open');
+        $('#modal-content').html(resp);
+        $modal.foundation('open');
       });
 
     });

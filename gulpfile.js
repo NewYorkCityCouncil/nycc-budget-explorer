@@ -56,74 +56,74 @@ gulp.task('data', function() {
     function combineAgencies(field) {
       for( var k = 0; k < json.length; ++k ) {
         var agencyID = json[k][field];
-        if( ['068'].indexOf(agencyID) != -1 ) { json[k][field] = "ADMIN FOR CHILDREN'S SERVICES";}
-        if( ['073'].indexOf(agencyID) != -1 ) { json[k][field] = "BOARD OF CORRECTION";}
-        if( ['003'].indexOf(agencyID) != -1 ) { json[k][field] = "BOARD OF ELECTIONS";}
-        if( ['829'].indexOf(agencyID) != -1 ) { json[k][field] = "BUSINESS INTEGRITY COMMISSION";}
-        if( ['010','011','012','013','014'].indexOf(agencyID) != -1 ) { json[k][field] = "BOROUGH PRESIDENT";}
-        if( ['004'].indexOf(agencyID) != -1 ) { json[k][field] = "CAMPAIGN FINANCE BOARD";}
-        if( ['103'].indexOf(agencyID) != -1 ) { json[k][field] = "CITY CLERK";}
-        if( ['102'].indexOf(agencyID) != -1 ) { json[k][field] = "CITY COUNCIL";}
-        if( ['042'].indexOf(agencyID) != -1 ) { json[k][field] = "CITY UNIVERSITY OF NEW YORK";}
-        if( ['134'].indexOf(agencyID) != -1 ) { json[k][field] = 'CIVIL SERVICE COMMISSION';}
-        if( ['054'].indexOf(agencyID) != -1 ) { json[k][field] = 'CIVILIAN COMPLAINT REVIEW BOARD';}
-        if( ['226'].indexOf(agencyID) != -1 ) { json[k][field] = 'COMMISSION ON HUMAN RIGHTS';}
+        if( ['068'].indexOf(agencyID) != -1 ) { json[k][field] = "Admin for Children's Services";}
+        if( ['073'].indexOf(agencyID) != -1 ) { json[k][field] = "Board of Correction";}
+        if( ['003'].indexOf(agencyID) != -1 ) { json[k][field] = "Board of Elections";}
+        if( ['829'].indexOf(agencyID) != -1 ) { json[k][field] = "Business Integrity Commission";}
+        if( ['010','011','012','013','014'].indexOf(agencyID) != -1 ) { json[k][field] = "Borough President";}
+        if( ['004'].indexOf(agencyID) != -1 ) { json[k][field] = "Campaign Finance Board";}
+        if( ['103'].indexOf(agencyID) != -1 ) { json[k][field] = "City Clerk";}
+        if( ['102'].indexOf(agencyID) != -1 ) { json[k][field] = "City Council";}
+        if( ['042'].indexOf(agencyID) != -1 ) { json[k][field] = "City University of New York";}
+        if( ['134'].indexOf(agencyID) != -1 ) { json[k][field] = 'Civil Service Commission';}
+        if( ['054'].indexOf(agencyID) != -1 ) { json[k][field] = 'Civilian Complaint Review Board';}
+        if( ['226'].indexOf(agencyID) != -1 ) { json[k][field] = 'Commission on Human Rights';}
         if( ['341','342','343','344','345','346','347','348','349','350','351','352','381',
           '382','383','384','385','386','387','388','389','390','391','392','431','432','433',
           '434','435','436','437','438','439','440','441','442','443','444','471','472','473',
           '474','475','476','477','478','479','480','481','482','483','484','485','486','487',
-          '488','491','492','493'].indexOf(agencyID) != -1 ) { json[k][field] = "COMMUNITY BOARD";}
-        if( ['312'].indexOf(agencyID) != -1 ) { json[k][field] = "CONFLICTS OF INTEREST BOARD";}
-        if( ['099'].indexOf(agencyID) != -1 ) { json[k][field] = "DEBT SERVICE";}
-        if( ['125'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT FOR THE AGING";}
-        if( ['810'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF BUILDINGS";}
-        if( ['030'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF CITY PLANNING";}
-        if( ['856'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF CITYWIDE ADMIN SERVICE";}
-        if( ['866'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF CONSUMER AFFAIRS";}
-        if( ['072'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF CORRECTION";}
-        if( ['126'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF CULTURAL AFFAIRS";}
-        if( ['850'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF DESIGN & CONSTRUCTION";}
-        if( ['040'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF EDUCATION";}
-        if( ['017'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF EMERGENCY MANAGEMENT";}
-        if( ['826'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF ENVIRONMENTAL PROTECT.";}
-        if( ['836'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF FINANCE";}
-        if( ['816'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF HEALTH AND MENTAL HYGIENE";}
-        if( ['071'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF HOMELESS SERVICES";}
-        if( ['858'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF INFO TECH & TELECOMM";}
-        if( ['032'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF INVESTIGATION";}
-        if( ['846'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF PARKS AND RECREATION";}
-        if( ['781'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF PROBATION";}
-        if( ['860'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF RECORDS & INFORMATION SVS";}
-        if( ['827'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF SANITATION";}
-        if( ['801'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF SMALL BUSINESS SERVICES";}
-        if( ['069'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF SOCIAL SERVICES";}
-        if( ['841'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF TRANSPORTATION";}
-        if( ['063'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF VETERANS' SERVICES";}
-        if( ['260'].indexOf(agencyID) != -1 ) { json[k][field] = "DEPARTMENT OF YOUTH & COMMUNITY DEV";}
-        if( ['901','902','903','904','905'].indexOf(agencyID) != -1 ) { json[k][field] = "DISTRICT ATTORNEY";}
-        if( ['133'].indexOf(agencyID) != -1 ) { json[k][field] = "EQUAL EMPLOYMENT PRACTICES COMMISSION";}
-        if( ['127'].indexOf(agencyID) != -1 ) { json[k][field] = "FINANCIAL INFORMATION SERVICE AGENCY";}
-        if( ['057'].indexOf(agencyID) != -1 ) { json[k][field] = "FIRE DEPARTMENT";}
-        if( ['819'].indexOf(agencyID) != -1 ) { json[k][field] = "HEALTH AND HOSPITALS CORP";}
-        if( ['806'].indexOf(agencyID) != -1 ) { json[k][field] = "HOUSING PRESERVATION AND DEVELOPMENT";}
-        if( ['132'].indexOf(agencyID) != -1 ) { json[k][field] = "INDEPENDENT BUDGET OFFICE";}
-        if( ['136'].indexOf(agencyID) != -1 ) { json[k][field] = "LANDMARKS PRESERVATION COMM.";}
-        if( ['025'].indexOf(agencyID) != -1 ) { json[k][field] = "LAW DEPARTMENT";}
-        if( ['035','037','038','039'].indexOf(agencyID) != -1 ) { json[k][field] = "LIBRARIES";}
-        if( ['002'].indexOf(agencyID) != -1 ) { json[k][field] = "MAYORALTY";}
-        if( ['098'].indexOf(agencyID) != -1 ) { json[k][field] = "MISCELLANEOUS";}
-        if( ['156'].indexOf(agencyID) != -1 ) { json[k][field] = "NYC TAXI AND LIMOUSINE COMM";}
-        if( ['820'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF ADMIN TRIALS & HEARINGS";}
-        if( ['021'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF ADMINISTRATIVE TAX APPEALS";}
-        if( ['313'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF COLLECTIVE BARGAINING";}
-        if( ['131'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF PAYROLL ADMINISTRATION";}
-        if( ['906'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF PROSECUTION SPEC NARCO";}
-        if( ['008'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF THE ACTUARY";}
-        if( ['015'].indexOf(agencyID) != -1 ) { json[k][field] = "OFFICE OF THE COMPTROLLER";}
-        if( ['095'].indexOf(agencyID) != -1 ) { json[k][field] = "PENSION CONTRIBUTIONS";}
-        if( ['056'].indexOf(agencyID) != -1 ) { json[k][field] = "POLICE DEPARTMENT";}
-        if( ['941','942','943','944','945','945'].indexOf(agencyID) != -1 ) { json[k][field] = "PUBLIC ADMINISTRATOR";}
-        if( ['101'].indexOf(agencyID) != -1 ) { json[k][field] = "PUBLIC ADVOCATE";}
+          '488','491','492','493'].indexOf(agencyID) != -1 ) { json[k][field] = "Community Board";}
+        if( ['312'].indexOf(agencyID) != -1 ) { json[k][field] = "Conflicts of Interest Board";}
+        if( ['099'].indexOf(agencyID) != -1 ) { json[k][field] = "Debt Service";}
+        if( ['125'].indexOf(agencyID) != -1 ) { json[k][field] = "Department for the Aging";}
+        if( ['810'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Buildings";}
+        if( ['030'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of City Planning";}
+        if( ['856'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Citywide Admin Service";}
+        if( ['866'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Consumer Affairs";}
+        if( ['072'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Correction";}
+        if( ['126'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Cultural Affairs";}
+        if( ['850'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Design & Construction";}
+        if( ['040'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Education";}
+        if( ['017'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Emergency Management";}
+        if( ['826'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Environmental Protection";}
+        if( ['836'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Finance";}
+        if( ['816'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Health & Mental Hygiene";}
+        if( ['071'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Homeless Services";}
+        if( ['858'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Information Technology & Telecommunications";}
+        if( ['032'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Investigation";}
+        if( ['846'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Parks & Recreation";}
+        if( ['781'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Probation";}
+        if( ['860'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Records & Information Services";}
+        if( ['827'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Sanitation";}
+        if( ['801'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Small Business Services";}
+        if( ['069'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Social Services";}
+        if( ['841'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Transportation";}
+        if( ['063'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Veterans' Services";}
+        if( ['260'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Youth & Community Dev";}
+        if( ['901','902','903','904','905'].indexOf(agencyID) != -1 ) { json[k][field] = "District Attorney";}
+        if( ['133'].indexOf(agencyID) != -1 ) { json[k][field] = "Equal Employment Practices Commission";}
+        if( ['127'].indexOf(agencyID) != -1 ) { json[k][field] = "Financial Information Service Agency";}
+        if( ['057'].indexOf(agencyID) != -1 ) { json[k][field] = "Fire Department";}
+        if( ['819'].indexOf(agencyID) != -1 ) { json[k][field] = "Health & Hospitals Corporation";}
+        if( ['806'].indexOf(agencyID) != -1 ) { json[k][field] = "Housing Preservation & Development";}
+        if( ['132'].indexOf(agencyID) != -1 ) { json[k][field] = "Independent Budget Office";}
+        if( ['136'].indexOf(agencyID) != -1 ) { json[k][field] = "Landmarks Preservation Commission";}
+        if( ['025'].indexOf(agencyID) != -1 ) { json[k][field] = "Law Department";}
+        if( ['035','037','038','039'].indexOf(agencyID) != -1 ) { json[k][field] = "Libraries";}
+        if( ['002'].indexOf(agencyID) != -1 ) { json[k][field] = "Mayoralty";}
+        if( ['098'].indexOf(agencyID) != -1 ) { json[k][field] = "Miscellaneous";}
+        if( ['156'].indexOf(agencyID) != -1 ) { json[k][field] = "NYC Taxi & Limousine Commission";}
+        if( ['820'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of Admin Trials & Hearings";}
+        if( ['021'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of Administrative Tax Appeals";}
+        if( ['313'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of Collective Bargaining";}
+        if( ['131'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of Payroll Administration";}
+        if( ['906'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of the Special Narcotics Prosecutor";}
+        if( ['008'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of the Actuary";}
+        if( ['015'].indexOf(agencyID) != -1 ) { json[k][field] = "Office of the Comptroller";}
+        if( ['095'].indexOf(agencyID) != -1 ) { json[k][field] = "Pension Contributions";}
+        if( ['056'].indexOf(agencyID) != -1 ) { json[k][field] = "Police Department";}
+        if( ['941','942','943','944','945','945'].indexOf(agencyID) != -1 ) { json[k][field] = "Public Administrator";}
+        if( ['101'].indexOf(agencyID) != -1 ) { json[k][field] = "Public Advocate";}
       }
       return json;
     }
@@ -133,14 +133,14 @@ gulp.task('data', function() {
     function combineClasses(field) {
       for( var k = 0; k < json.length; ++k ) {
         var object_class_number = json[k][field];
-        if( ['05'].indexOf(object_class_number) != -1 ) { json[k][field] = "AMOUNTS TO BE SCHEDULED";}
+        if( ['05'].indexOf(object_class_number) != -1 ) { json[k][field] = "Amounts to be Scheduled";}
         if( ['70','07','40'].indexOf(object_class_number) != -1 ) { json[k][field] = "Charges, Services, Expenses";}
-        if( ['60'].indexOf(object_class_number) != -1 ) { json[k][field] = "CONTRACTUAL SERVICES";}
+        if( ['60'].indexOf(object_class_number) != -1 ) { json[k][field] = "Contractual Services";}
         if( ['90'].indexOf(object_class_number) != -1 ) { json[k][field] = "OTPS";}
         if( ['04','06','01','02','03'].indexOf(object_class_number) != -1 ) { json[k][field] = "Pay, Fringe Benefits";}
         if( ['30','10'].indexOf(object_class_number) != -1 ) { json[k][field] = "Property, Equipment, Supplies";}
-        if( ['50'].indexOf(object_class_number) != -1 ) { json[k][field] = "SOCIAL SERVICES";}
-        if( ['80'].indexOf(object_class_number) != -1 ) { json[k][field] = "TRANSFERS FOR DEBT SERVICE";}
+        if( ['50'].indexOf(object_class_number) != -1 ) { json[k][field] = "Social Services";}
+        if( ['80'].indexOf(object_class_number) != -1 ) { json[k][field] = "Transfers for Debt Service";}
       }
       return json;
     }
@@ -205,10 +205,12 @@ gulp.task('summary', function() {
 
       // Write the HTML for the grouped items
       objectData =
-        '<html><body>\n<h1>Total: $' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h1>\n'
-        + '<p>'
+        '<html><body>\n<h3 class="header-xlarge">$' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h3>\n'
+        + '<h4 class="header-medium sans-serif">'
           + json[k][0].agency_number + '<br>'
-          + json[k][0].object_class_number + '<br>'
+          + '<small>' + json[k][0].object_class_number + '</small>'
+        + '</h4>'
+        + '<p>'
           + objectData
         + '</p>\n'
         + '</body></html>'
