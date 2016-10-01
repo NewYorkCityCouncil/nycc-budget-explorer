@@ -133,3 +133,11 @@
   margin: 0;
   padding: 0.5rem 0;
   text-transform: uppercase; }
+
+.big-dollar-amount {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  font-weight: bold; }
+  @media screen and (min-width: 64em) {
+    .big-dollar-amount {
+      font-size: 2rem; } }

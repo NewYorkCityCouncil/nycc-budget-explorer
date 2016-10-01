@@ -89,7 +89,6 @@ jQuery(document).ready(function($) {
       });
       var filterValue = inclusives.length ? inclusives.join(', ') : filterAgency;
       $grid.isotope({ filter: filterValue });
-      console.log(filterValue);
     }
 
     $('.budget-filter').on( 'change', function() {
@@ -131,6 +130,19 @@ jQuery(document).ready(function($) {
       });
 
     });
+
+    var visibleTotal = function() {
+      var total = 0;
+      $('.budget-item:visible').each(function() {
+        total = total + Number($(this).attr('data-amount'));
+      });
+      total = total.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      $('#visible-total').text( total );
+    }
+    $grid.on( 'arrangeComplete', function() {
+      visibleTotal();
+    });
+    visibleTotal();
 
   });
 
