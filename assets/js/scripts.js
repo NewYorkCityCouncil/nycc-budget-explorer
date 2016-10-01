@@ -72,7 +72,9 @@ jQuery(document).ready(function($) {
         columnWidth: '.budget-item'
       },
       getSortData: {
-        agency: '[data-agency]'
+        agency: '[data-agency]',
+        category: '[data-category]',
+        amount: '[data-amount] parseInt'
       },
       sortBy: 'agency'
     });
@@ -155,6 +157,10 @@ jQuery(document).ready(function($) {
       visibleTotal();
     });
     visibleTotal();
+
+    $( "#sort-agency" ).click(function() { $grid.isotope({ sortBy : 'agency' }); });
+    $( "#sort-category" ).click(function() { $grid.isotope({ sortBy : 'category' }); });
+    $( "#sort-amount" ).click(function() { $grid.isotope({ sortBy : 'amount' }); });
 
   });
 
