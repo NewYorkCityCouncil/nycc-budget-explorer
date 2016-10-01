@@ -79,7 +79,9 @@ jQuery(document).ready(function($) {
 
     // Get unique agencies and categories
     var uniqueAgencies = agencyList.unique();
+    uniqueAgencies.sort();
     var uniqueCategories = categoryList.unique();
+    uniqueCategories.sort();
 
     // render the filters
     $.each( uniqueAgencies, function( i, val ) {
@@ -87,15 +89,38 @@ jQuery(document).ready(function($) {
     });
     $.each( uniqueCategories, function( i, val ) {
       $('#budget-filter--category').append( '<option value=".' + slugify(val) + '">' + val + '</option>');
-      $('#budget-filter--key').append( '<li><span class="label ' + slugify(val) + '">' + val + '</span></li>');
+      $('#budget-filter--key').append( '<li><button class="button filter-button ' + slugify(val) + '" data-category=".' + slugify(val) + '">' + val + '</button></li>');
     });
 
     // filter functions
-    $('.budget-filter').on( 'change', function() {
+    var applyFilters = function() {
       var filterAgency = $('#budget-filter--agency').val();
-      var filterCategory = $('#budget-filter--category').val();
-      filterValue = filterAgency + filterCategory;
+      var inclusives = [];
+      $('.filter-button').not('.hollow').each(function() {
+        inclusives.push( filterAgency + $(this).attr('data-category') );
+      });
+      var filterValue = inclusives.length ? inclusives.join(', ') : filterAgency;
       $grid.isotope({ filter: filterValue });
+      console.log(filterValue);
+    }
+
+    $('.budget-filter').on( 'change', function() {
+      applyFilters();
+    });
+
+    $('.filter-button').on( 'click', function() {
+      if ( $('.filter-button.hollow').length > 0 ) {
+        $(this).toggleClass('hollow').promise().done(function(){
+          if ( $('.filter-button').not('.hollow').length == 0 ) {
+            $('.filter-button').removeClass('hollow');
+          }
+        });
+      }
+      else {
+        // there are no hollow buttons
+        $('.filter-button').not(this).addClass('hollow');
+      }
+      applyFilters();
     });
 
     // Open the details modal

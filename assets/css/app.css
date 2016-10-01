@@ -74,40 +74,59 @@
   #budget-filter--key li {
     display: inline-block;
     margin: 0 0.5rem 0.5rem 0; }
-  #budget-filter--key .label {
-    font-size: 0.75rem; }
-
-.label.amounts-to-be-scheduled {
-  background-color: #d05d4e;
-  color: #fff; }
-
-.label.charges-services-expenses {
-  background-color: #FFB716;
-  color: #222; }
-
-.label.otps {
-  background-color: #EFDB1D;
-  color: #222; }
-
-.label.contractual-services {
-  background-color: #43AC6A;
-  color: #fff; }
-
-.label.pay-fringe-benefits {
-  background-color: #2f56a6;
-  color: #fff; }
-
-.label.property-equipment-supplies {
-  background-color: #7E73E5;
-  color: #fff; }
-
-.label.social-services {
-  background-color: #A24993;
-  color: #fff; }
-
-.label.transfers-for-debt-service {
-  background-color: #A07952;
-  color: #fff; }
+  #budget-filter--key button {
+    margin: 0;
+    font-size: 0.7rem; }
+  #budget-filter--key .amounts-to-be-scheduled {
+    background-color: #d05d4e;
+    border-color: #d05d4e;
+    color: #fff; }
+  #budget-filter--key .charges-services-expenses {
+    background-color: #FFB716;
+    border-color: #FFB716;
+    color: #222; }
+  #budget-filter--key .otps {
+    background-color: #EFDB1D;
+    border-color: #EFDB1D;
+    color: #222; }
+  #budget-filter--key .contractual-services {
+    background-color: #43AC6A;
+    border-color: #43AC6A;
+    color: #fff; }
+  #budget-filter--key .pay-fringe-benefits {
+    background-color: #2f56a6;
+    border-color: #2f56a6;
+    color: #fff; }
+  #budget-filter--key .property-equipment-supplies {
+    background-color: #7E73E5;
+    border-color: #7E73E5;
+    color: #fff; }
+  #budget-filter--key .social-services {
+    background-color: #A24993;
+    border-color: #A24993;
+    color: #fff; }
+  #budget-filter--key .transfers-for-debt-service {
+    background-color: #A07952;
+    border-color: #A07952;
+    color: #fff; }
+  #budget-filter--key .hollow {
+    background-color: transparent; }
+    #budget-filter--key .hollow.amounts-to-be-scheduled {
+      color: #d05d4e; }
+    #budget-filter--key .hollow.charges-services-expenses {
+      color: #FFB716; }
+    #budget-filter--key .hollow.otps {
+      color: #EFDB1D; }
+    #budget-filter--key .hollow.contractual-services {
+      color: #43AC6A; }
+    #budget-filter--key .hollow.pay-fringe-benefits {
+      color: #2f56a6; }
+    #budget-filter--key .hollow.property-equipment-supplies {
+      color: #7E73E5; }
+    #budget-filter--key .hollow.social-services {
+      color: #A24993; }
+    #budget-filter--key .hollow.transfers-for-debt-service {
+      color: #A07952; }
 
 .budget-line-item {
   border-top: 1px solid #e6e6e6;

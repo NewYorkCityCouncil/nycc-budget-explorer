@@ -96,18 +96,30 @@ $black: #222;
     display: inline-block;
     margin: 0 0.5rem 0.5rem 0;
   }
-  .label {
-    font-size: 0.75rem;
+  button {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  .amounts-to-be-scheduled { background-color: $red; border-color: $red; color: $white; }
+  .charges-services-expenses { background-color: $orange; border-color: $orange; color: $black; }
+  .otps { background-color: $yellow; border-color: $yellow; color: $black; }
+  .contractual-services { background-color: $green; border-color: $green; color: $white; }
+  .pay-fringe-benefits { background-color: $blue; border-color: $blue; color: $white; }
+  .property-equipment-supplies { background-color: $indigo; border-color: $indigo; color: $white; }
+  .social-services { background-color: $violet; border-color: $violet; color: $white; }
+  .transfers-for-debt-service { background-color: $brown; border-color: $brown; color: $white; }
+  .hollow {
+    background-color: transparent;
+    &.amounts-to-be-scheduled { color: $red; }
+    &.charges-services-expenses { color: $orange; }
+    &.otps { color: $yellow; }
+    &.contractual-services { color: $green; }
+    &.pay-fringe-benefits { color: $blue; }
+    &.property-equipment-supplies { color: $indigo; }
+    &.social-services { color: $violet; }
+    &.transfers-for-debt-service { color: $brown; }
   }
 }
-.label.amounts-to-be-scheduled { background-color: $red; color: $white; }
-.label.charges-services-expenses { background-color: $orange; color: $black; }
-.label.otps { background-color: $yellow; color: $black; }
-.label.contractual-services { background-color: $green; color: $white; }
-.label.pay-fringe-benefits { background-color: $blue; color: $white; }
-.label.property-equipment-supplies { background-color: $indigo; color: $white; }
-.label.social-services { background-color: $violet; color: $white; }
-.label.transfers-for-debt-service { background-color: $brown; color: $white; }
 
 .budget-line-item {
   border-top: 1px solid $light-gray;
