@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
     });
     $.each( uniqueCategories, function( i, val ) {
       $('#budget-filter--category').append( '<option value=".' + slugify(val) + '">' + val + '</option>');
-      $('#budget-filter--key').append( '<li><button class="button filter-button ' + slugify(val) + '" data-category=".' + slugify(val) + '">' + val + '</button></li>');
+      $('#budget-filter--key').append( '<li><button class="button tiny filter-button ' + slugify(val) + '" data-category=".' + slugify(val) + '">' + val + '</button></li>');
     });
 
     // filter functions
