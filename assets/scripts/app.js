@@ -146,9 +146,11 @@ jQuery(document).ready(function($) {
       $('.budget-item:visible').each(function() {
         total = total + Number($(this).attr('data-amount'));
       });
-      var percentage = parseFloat(((total / budgetTotal) * 100).toFixed(2));
-      if (percentage < 0.01) {
+      var percentage = ((total / budgetTotal) * 100);
+      if ( percentage < 0.01 && percentage > 0 ) {
         percentage = "Less than 0.01";
+      } else {
+        percentage = parseFloat( percentage.toFixed(2) );
       }
       total = total.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
       $('#visible-total').text( total );
