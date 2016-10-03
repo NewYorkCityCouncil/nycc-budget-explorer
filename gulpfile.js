@@ -134,9 +134,8 @@ gulp.task('data', function() {
       for( var k = 0; k < json.length; ++k ) {
         var object_class_number = json[k][field];
         if( ['05'].indexOf(object_class_number) != -1 ) { json[k][field] = "Amounts to be Scheduled";}
-        if( ['70','07','40'].indexOf(object_class_number) != -1 ) { json[k][field] = "Charges, Services, Expenses";}
+        if( ['70','07','40','90'].indexOf(object_class_number) != -1 ) { json[k][field] = "Charges, Services, Expenses";}
         if( ['60'].indexOf(object_class_number) != -1 ) { json[k][field] = "Contractual Services";}
-        if( ['90'].indexOf(object_class_number) != -1 ) { json[k][field] = "OTPS";}
         if( ['04','06','01','02','03'].indexOf(object_class_number) != -1 ) { json[k][field] = "Pay, Fringe Benefits";}
         if( ['30','10'].indexOf(object_class_number) != -1 ) { json[k][field] = "Property, Equipment, Supplies";}
         if( ['50'].indexOf(object_class_number) != -1 ) { json[k][field] = "Social Services";}
