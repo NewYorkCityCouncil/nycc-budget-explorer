@@ -132,12 +132,18 @@ $color-7: $brown;
 
 .big-dollar-amount {
   font-size: 1.5rem;
-  line-height: 1.75;
   font-weight: bold;
+  margin-bottom: 0;
   @media screen and (min-width:40em) {
     // text-align: center;
   }
   @media screen and (min-width: 64em) {
     font-size: 2rem;
   }
+}
+.visible-percentage {
+  // font-size: 0.875rem;
+  font-style: italic;
+  font-weight: bold;
+  color: $gray;
 }

@@ -145,18 +145,33 @@ jQuery(document).ready(function($) {
 
     });
 
+    var budgetTotal = 0;
+    var setBudgetTotal = function() {
+      $('.budget-item').each(function() {
+        budgetTotal = budgetTotal + Number($(this).attr('data-amount'));
+      });
+      visibleTotal();
+    }
+
     var visibleTotal = function() {
       var total = 0;
       $('.budget-item:visible').each(function() {
         total = total + Number($(this).attr('data-amount'));
       });
+      var percentage = parseFloat(((total / budgetTotal) * 100).toFixed(2));
+      if (percentage < 0.01) {
+        percentage = "Less than 0.01";
+      }
       total = total.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
       $('#visible-total').text( total );
+      $('#visible-percentage').text( percentage );
     }
+
     $grid.on( 'arrangeComplete', function() {
       visibleTotal();
     });
-    visibleTotal();
+
+    setBudgetTotal();
 
     $( "#sort-agency" ).click(function() { $grid.isotope({ sortBy : 'agency' }); });
     $( "#sort-category" ).click(function() { $grid.isotope({ sortBy : 'category' }); });

@@ -120,8 +120,13 @@
 
 .big-dollar-amount {
   font-size: 1.5rem;
-  line-height: 1.75;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 0; }
   @media screen and (min-width: 64em) {
     .big-dollar-amount {
       font-size: 2rem; } }
+
+.visible-percentage {
+  font-style: italic;
+  font-weight: bold;
+  color: #8a8a8a; }
