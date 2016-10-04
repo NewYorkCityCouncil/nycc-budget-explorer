@@ -91,6 +91,7 @@ jQuery(document).ready(function($) {
       });
       var filterValue = inclusives.length ? inclusives.join(', ') : filterAgency;
       $grid.isotope({ filter: filterValue });
+      ga('send', 'event', 'Budget Filter', filterValue);
     }
 
     $('.budget-filter').on( 'change', function() {
@@ -164,9 +165,9 @@ jQuery(document).ready(function($) {
 
     setBudgetTotal();
 
-    $( "#sort-agency" ).click(function() { $grid.isotope({ sortBy : 'agency' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); });
-    $( "#sort-category" ).click(function() { $grid.isotope({ sortBy : 'category' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); });
-    $( "#sort-amount" ).click(function() { $grid.isotope({ sortBy : 'amount' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); });
+    $( "#sort-agency" ).click(function() { $grid.isotope({ sortBy : 'agency' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); ga('send', 'event', 'Budget Sort', 'Agency'); });
+    $( "#sort-category" ).click(function() { $grid.isotope({ sortBy : 'category' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); ga('send', 'event', 'Budget Sort', 'Category'); });
+    $( "#sort-amount" ).click(function() { $grid.isotope({ sortBy : 'amount' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); ga('send', 'event', 'Budget Sort', 'Amount'); });
 
   });
 
