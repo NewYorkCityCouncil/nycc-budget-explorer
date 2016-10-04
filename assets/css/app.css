@@ -11,8 +11,10 @@
 #budget-filters {
   background-color: #f7f7f7;
   padding: 1rem 1rem 0;
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.5rem;
   border: 1px solid #ddd; }
+  #budget-filters label {
+    margin-bottom: 0.5rem; }
 
 #budget-items {
   margin: 0 -0.5rem 1rem; }
@@ -121,12 +123,19 @@
 .big-dollar-amount {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 0; }
+  margin: -0.625rem 0 0; }
+  @media screen and (min-width: 40em) {
+    .big-dollar-amount {
+      font-size: 1.75rem; } }
   @media screen and (min-width: 64em) {
     .big-dollar-amount {
-      font-size: 2rem; } }
+      font-size: 2.75rem; } }
 
 .visible-percentage {
   font-style: italic;
-  font-weight: bold;
-  color: #8a8a8a; }
+  color: #666; }
+  @media screen and (min-width: 64em) {
+    .visible-percentage {
+      font-size: 1.25rem; } }
+  .visible-percentage strong {
+    font-style: normal; }

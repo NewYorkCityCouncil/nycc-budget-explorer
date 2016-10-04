@@ -175,9 +175,9 @@ jQuery(document).ready(function($) {
 
     setBudgetTotal();
 
-    $( "#sort-agency" ).click(function() { $grid.isotope({ sortBy : 'agency' }); });
-    $( "#sort-category" ).click(function() { $grid.isotope({ sortBy : 'category' }); });
-    $( "#sort-amount" ).click(function() { $grid.isotope({ sortBy : 'amount' }); });
+    $( "#sort-agency" ).click(function() { $grid.isotope({ sortBy : 'agency' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); });
+    $( "#sort-category" ).click(function() { $grid.isotope({ sortBy : 'category' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); });
+    $( "#sort-amount" ).click(function() { $grid.isotope({ sortBy : 'amount' }); $(this).removeClass('hollow'); $('.sort-button').not(this).addClass('hollow'); });
 
   });
 

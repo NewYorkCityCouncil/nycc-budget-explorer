@@ -5,6 +5,8 @@
   <head>
     <meta charset="utf-8">
 
+    <title>NYC Budget Explorer</title>
+
     <!-- Force IE to use the latest rendering engine available -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -54,30 +56,39 @@
         <div class="row">
           <div class="columns">
 
-            <h1 class="header-large">New York City runs on billions of dollars. How public funds are distributed affects our City's operations, services, construction, and so much more. See how&hellip;</h1>
+            <h1 class="header-large">New York City runs on billions of dollars. The Expense Budget determines recurring expenses and contracts, such as teachers in our schools, the electricity at local senior centers, and maintenance of city parks.</h1>
 
             <div id="budget-filters">
               <div class="row">
                 <div class="columns medium-7">
-                  <p><label>Filter the budget items by agency and/or category&hellip;</label></p>
+
+                  <h2 class="header-medium">Explore the Expense Budget <small>Fiscal&nbsp;Year&nbsp;2017</small></h2>
+
+                  <label>Filter by agency and/or category&hellip;</label>
                   <select class="budget-filter" id="budget-filter--agency">
                     <option value="">All Agencies</option>
                   </select>
                   <ul id="budget-filter--key" class="no-bullet"></ul>
+
                 </div>
                 <div class="columns medium-5">
+
                   <label>Total:</label>
                   <h3 class="big-dollar-amount sans-serif">$<span id="visible-total"></span></h3>
-                  <p class="visible-percentage"><span id="visible-percentage"></span>% of the Expense Budget</p>
-                  <fieldset class="">
-                    <legend>Sort by&hellip;</legend>
-                    <input type="radio" name="sort-by" id="sort-agency" checked><label for="sort-agency"><strong>Agency</strong></label>
-                    <input type="radio" name="sort-by" id="sort-category"><label for="sort-category"><strong>Category</strong></label>
-                    <input type="radio" name="sort-by" id="sort-amount"><label for="sort-amount"><strong>Amount</strong></label>
-                  </fieldset>
+                  <p class="visible-percentage"><strong><span id="visible-percentage"></span>%</strong> of the Expense Budget</p>
+
+                  <label>Sort by&hellip;</label>
+                  <div class="button-group small">
+                    <button id="sort-agency" class="button sort-button secondary" style="margin:0;"><strong>Agency</strong></button>
+                    <button id="sort-category" class="button sort-button secondary hollow" style="margin:0;border-left-width:0;"><strong>Category</strong></button>
+                    <button id="sort-amount" class="button sort-button secondary hollow" style="margin:0;border-left-width:0;"><strong>Amount</strong></button>
+                  </div>
+
                 </div>
               </div>
             </div>
+
+            <p class="text-small text-right"><a href="https://data.cityofnewyork.us/City-Government/Expense-Budget/mwzb-yiwb" class=""><strong>Get the open data</strong></a></p>
 
             <div id="budget-items"></div>
 
