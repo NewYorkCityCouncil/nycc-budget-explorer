@@ -141,7 +141,7 @@ jQuery(document).ready(function($) {
       .done(function(resp) {
         $('#modal-content').html(resp);
         $modal.foundation('open');
-        ga('send', 'event', 'Budget Modal', 'open', 'assets/html/group-' + key + '.html');
+        ga('send', 'event', 'Budget Modal', 'assets/html/group-' + key + '.html');
       });
 
     });
