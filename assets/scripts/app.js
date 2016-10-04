@@ -129,7 +129,7 @@ jQuery(document).ready(function($) {
       .done(function(resp) {
         $('#modal-content').html(resp);
         $modal.foundation('open');
-        ga('send', 'pageview', url);
+        ga('send', 'event', 'Budget Modal', 'open', url);
       });
 
     });
