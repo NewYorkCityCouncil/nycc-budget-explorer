@@ -187,6 +187,17 @@ gulp.task('summary', function() {
       var objectData = '';
       var totalCost = 0;
 
+      // Put items in order by financial_plan_amount
+      json[k].sort(function(a, b) {
+        if ( parseInt(a.financial_plan_amount, 10) > parseInt(b.financial_plan_amount, 10) ) {
+          return -1;
+        }
+        if ( parseInt(a.financial_plan_amount, 10) < parseInt(b.financial_plan_amount, 10) ) {
+          return 1;
+        }
+        return 0;
+      });
+
       // Loop through the budget items in the group
       for( var i = 0; i < json[k].length; ++i ) {
 
