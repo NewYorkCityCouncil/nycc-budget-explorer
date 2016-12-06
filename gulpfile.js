@@ -204,10 +204,18 @@ gulp.task('summary', function() {
         var dollarAmmount = parseInt(json[k][i].financial_plan_amount); // Make the value an integer
         totalCost = totalCost + dollarAmmount; // Add each item to the group total
 
+        // format the dollar amount
+        if( dollarAmmount >= 0 ){
+          var formattedDollars = '$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+        } else {
+          var negativeAmount = dollarAmmount * -1;
+          var formattedDollars = '-$' + negativeAmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+        }
+
         // Combine all the group's items
         var objectData = objectData
           + '<p class="budget-line-item">'
-            + '<strong>$' + dollarAmmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</strong> &ndash; <small>'
+            + '<strong>' + formattedDollars + '</strong> &ndash; <small>'
             + json[k][i].budget_code_name + ', '
             + json[k][i].object_class_name + ', '
             + json[k][i].object_code_name
@@ -215,9 +223,17 @@ gulp.task('summary', function() {
         ;
       }
 
+      // format the dollar amount
+      if( totalCost >= 0 ){
+        var dollarAmount = '$' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      } else {
+        var negativeAmount = totalCost * -1;
+        var dollarAmount = '-$' + negativeAmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      }
+
       // Write the HTML for the grouped items
       objectData =
-        '<html><body>\n<h3 class="header-xlarge">$' + totalCost.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</h3>\n'
+        '<html><body>\n<h3 class="header-xlarge">' + dollarAmount + '</h3>\n'
         + '<h4 class="header-medium sans-serif">'
           + '<strong>' + json[k][0].agency_number + '</strong><br>'
           + '<small>' + json[k][0].object_class_number + '</small>'

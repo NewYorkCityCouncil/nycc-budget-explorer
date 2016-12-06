@@ -39,10 +39,18 @@ jQuery(document).ready(function($) {
       var agencyName = val.agency;
       var categoryName = val.class;
 
+      // format the dollar amount
+      if( val.amount >= 0 ){
+        var dollarAmount = '$' + val.amount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      } else {
+        var negativeAmount = val.amount * -1;
+        var dollarAmount = '-$' + negativeAmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      }
+
       // render budget items
       var size = Math.sqrt(val.amount / 10000);
       if(size < 1) { size = 1;}
-      $('#budget-items').append('<div class="budget-item ' + agencySlug + ' ' + categorySlug + '" data-amount="' + val.amount + '" data-agency="' + agencySlug + '" data-category="' + categorySlug + '" data-html-key="' + key + '"><div class="size" style="border-top-width:' + size + 'px;"><span class="dollar-ammount">$' + val.amount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + '</span> <span class="agency">' + agencyName + '</span> <span class="category">' + categoryName + '</span> </div></div>');
+      $('#budget-items').append('<div class="budget-item ' + agencySlug + ' ' + categorySlug + '" data-amount="' + val.amount + '" data-agency="' + agencySlug + '" data-category="' + categorySlug + '" data-html-key="' + key + '"><div class="size" style="border-top-width:' + size + 'px;"><span class="dollar-ammount">' + dollarAmount + '</span> <span class="agency">' + agencyName + '</span> <span class="category">' + categoryName + '</span> </div></div>');
 
       agencyList.push(val.agency);
       categoryList.push(val.class);
@@ -154,8 +162,16 @@ jQuery(document).ready(function($) {
       } else {
         percentage = parseFloat( percentage.toFixed(2) );
       }
-      total = total.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-      $('#visible-total').text( total );
+
+      // format the dollar amount
+      if( total >= 0 ){
+        var formattedTotal = '$' + total.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      } else {
+        var negativeAmount = total * -1;
+        var formattedTotal = '-$' + negativeAmount.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      }
+
+      $('#visible-total').text( formattedTotal );
       $('#visible-percentage').text( percentage );
     }
 
