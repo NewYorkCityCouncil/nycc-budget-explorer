@@ -1,15 +1,23 @@
 [{
   "agency": "Mayoralty",
   "class": "Pay, Fringe Benefits",
-  "amount": 103753633
+  "amount": 102818489
+}, {
+  "agency": "Department of Finance",
+  "class": "Pay, Fringe Benefits",
+  "amount": 163599810
+}, {
+  "agency": "Department of Emergency Management",
+  "class": "Pay, Fringe Benefits",
+  "amount": 18248297
 }, {
   "agency": "Department of Education",
   "class": "Pay, Fringe Benefits",
-  "amount": 14442947100
+  "amount": 14440447100
 }, {
   "agency": "Police Department",
   "class": "Property, Equipment, Supplies",
-  "amount": 116244755
+  "amount": 114104310
 }, {
   "agency": "Fire Department",
   "class": "Pay, Fringe Benefits",
@@ -21,7 +29,7 @@
 }, {
   "agency": "Department of Social Services",
   "class": "Pay, Fringe Benefits",
-  "amount": 867104533
+  "amount": 857002394
 }, {
   "agency": "Department of Correction",
   "class": "Pay, Fringe Benefits",
@@ -32,20 +40,24 @@
   "amount": 2823200
 }, {
   "agency": "Department of Finance",
-  "class": "Pay, Fringe Benefits",
-  "amount": 164579921
-}, {
-  "agency": "Department of Finance",
   "class": "Property, Equipment, Supplies",
   "amount": 8832133
-}, {
-  "agency": "Department of Citywide Admin Service",
-  "class": "Pay, Fringe Benefits",
-  "amount": 181907963
 }, {
   "agency": "Mayoralty",
   "class": "Contractual Services",
   "amount": 13666570
+}, {
+  "agency": "Department of Citywide Admin Service",
+  "class": "Pay, Fringe Benefits",
+  "amount": 176850818
+}, {
+  "agency": "Department of Emergency Management",
+  "class": "Contractual Services",
+  "amount": 12727511
+}, {
+  "agency": "Department of City Planning",
+  "class": "Contractual Services",
+  "amount": 8349605
 }, {
   "agency": "Department of Education",
   "class": "Contractual Services",
@@ -75,10 +87,6 @@
   "class": "Contractual Services",
   "amount": 24439726
 }, {
-  "agency": "Department of Emergency Management",
-  "class": "Contractual Services",
-  "amount": 12727511
-}, {
   "agency": "Office of Administrative Tax Appeals",
   "class": "Contractual Services",
   "amount": 168333
@@ -86,10 +94,6 @@
   "agency": "Law Department",
   "class": "Contractual Services",
   "amount": 42600714
-}, {
-  "agency": "Department of City Planning",
-  "class": "Contractual Services",
-  "amount": 8349605
 }, {
   "agency": "Department of Investigation",
   "class": "Contractual Services",
@@ -121,7 +125,7 @@
 }, {
   "agency": "Admin for Children's Services",
   "class": "Contractual Services",
-  "amount": 1873795501
+  "amount": 1872895501
 }, {
   "agency": "Department of Social Services",
   "class": "Contractual Services",
@@ -235,13 +239,17 @@
   "class": "Contractual Services",
   "amount": 267047934
 }, {
-  "agency": "Department of Buildings",
-  "class": "Contractual Services",
-  "amount": 32609341
-}, {
   "agency": "Department of Health & Mental Hygiene",
   "class": "Contractual Services",
   "amount": 805363251
+}, {
+  "agency": "Mayoralty",
+  "class": "Charges, Services, Expenses",
+  "amount": 7677445
+}, {
+  "agency": "Department of Buildings",
+  "class": "Contractual Services",
+  "amount": 32609341
 }, {
   "agency": "Office of Admin Trials & Hearings",
   "class": "Contractual Services",
@@ -261,7 +269,7 @@
 }, {
   "agency": "Department of Transportation",
   "class": "Contractual Services",
-  "amount": 228340540
+  "amount": 225627837
 }, {
   "agency": "Board of Elections",
   "class": "Pay, Fringe Benefits",
@@ -275,13 +283,21 @@
   "class": "Contractual Services",
   "amount": 335723471
 }, {
+  "agency": "Borough President",
+  "class": "Amounts to be Scheduled",
+  "amount": -1591312
+}, {
   "agency": "Department of Citywide Admin Service",
   "class": "Contractual Services",
-  "amount": 77787155
+  "amount": 77247291
 }, {
   "agency": "Department of Information Technology & Telecommunications",
   "class": "Contractual Services",
   "amount": 283180144
+}, {
+  "agency": "District Attorney",
+  "class": "Contractual Services",
+  "amount": 2625824
 }, {
   "agency": "Department of Records & Information Services",
   "class": "Contractual Services",
@@ -291,10 +307,6 @@
   "class": "Contractual Services",
   "amount": 589689
 }, {
-  "agency": "District Attorney",
-  "class": "Contractual Services",
-  "amount": 2625824
-}, {
   "agency": "Office of the Special Narcotics Prosecutor",
   "class": "Contractual Services",
   "amount": 102326
@@ -303,13 +315,13 @@
   "class": "Contractual Services",
   "amount": 18624
 }, {
-  "agency": "Mayoralty",
-  "class": "Charges, Services, Expenses",
-  "amount": 7677445
-}, {
   "agency": "Office of the Actuary",
   "class": "Pay, Fringe Benefits",
-  "amount": 4431279
+  "amount": 4274332
+}, {
+  "agency": "Department of Emergency Management",
+  "class": "Property, Equipment, Supplies",
+  "amount": -7849
 }, {
   "agency": "Board of Elections",
   "class": "Amounts to be Scheduled",
@@ -321,7 +333,7 @@
 }, {
   "agency": "Board of Elections",
   "class": "Charges, Services, Expenses",
-  "amount": 7846265
+  "amount": -954870
 }, {
   "agency": "Campaign Finance Board",
   "class": "Pay, Fringe Benefits",
@@ -349,11 +361,7 @@
 }, {
   "agency": "Borough President",
   "class": "Pay, Fringe Benefits",
-  "amount": 24151416
-}, {
-  "agency": "Borough President",
-  "class": "Amounts to be Scheduled",
-  "amount": 696483
+  "amount": 23104454
 }, {
   "agency": "Borough President",
   "class": "Property, Equipment, Supplies",
@@ -361,11 +369,15 @@
 }, {
   "agency": "Borough President",
   "class": "Charges, Services, Expenses",
-  "amount": 4009584
+  "amount": 1576396
 }, {
   "agency": "Office of the Comptroller",
   "class": "Pay, Fringe Benefits",
   "amount": 69818412
+}, {
+  "agency": "Office of the Comptroller",
+  "class": "Amounts to be Scheduled",
+  "amount": 0
 }, {
   "agency": "Office of the Comptroller",
   "class": "Property, Equipment, Supplies",
@@ -376,24 +388,16 @@
   "amount": 8075752
 }, {
   "agency": "Department of Emergency Management",
-  "class": "Pay, Fringe Benefits",
-  "amount": 18388562
-}, {
-  "agency": "Department of Emergency Management",
   "class": "Amounts to be Scheduled",
   "amount": 33773
 }, {
   "agency": "Department of Emergency Management",
-  "class": "Property, Equipment, Supplies",
-  "amount": 354003
-}, {
-  "agency": "Department of Emergency Management",
   "class": "Charges, Services, Expenses",
-  "amount": 26820463
+  "amount": 26606046
 }, {
   "agency": "Office of Administrative Tax Appeals",
   "class": "Pay, Fringe Benefits",
-  "amount": 4751772
+  "amount": 4697402
 }, {
   "agency": "Office of Administrative Tax Appeals",
   "class": "Amounts to be Scheduled",
@@ -409,7 +413,11 @@
 }, {
   "agency": "Law Department",
   "class": "Pay, Fringe Benefits",
-  "amount": 147294476
+  "amount": 146027908
+}, {
+  "agency": "Law Department",
+  "class": "Amounts to be Scheduled",
+  "amount": 0
 }, {
   "agency": "Law Department",
   "class": "Property, Equipment, Supplies",
@@ -424,12 +432,16 @@
   "amount": 27998984
 }, {
   "agency": "Department of City Planning",
-  "class": "Charges, Services, Expenses",
-  "amount": 6710400
+  "class": "Amounts to be Scheduled",
+  "amount": -25564
 }, {
   "agency": "Department of City Planning",
   "class": "Property, Equipment, Supplies",
   "amount": 2523954
+}, {
+  "agency": "Department of City Planning",
+  "class": "Charges, Services, Expenses",
+  "amount": 6710400
 }, {
   "agency": "Department of Investigation",
   "class": "Pay, Fringe Benefits",
@@ -449,7 +461,7 @@
 }, {
   "agency": "Department of Education",
   "class": "Property, Equipment, Supplies",
-  "amount": 940476777
+  "amount": 937976777
 }, {
   "agency": "Department of Education",
   "class": "Charges, Services, Expenses",
@@ -461,7 +473,7 @@
 }, {
   "agency": "City University of New York",
   "class": "Charges, Services, Expenses",
-  "amount": 132597228
+  "amount": 130597228
 }, {
   "agency": "City University of New York",
   "class": "Property, Equipment, Supplies",
@@ -485,7 +497,7 @@
 }, {
   "agency": "Civilian Complaint Review Board",
   "class": "Property, Equipment, Supplies",
-  "amount": 763941
+  "amount": 760841
 }, {
   "agency": "Civilian Complaint Review Board",
   "class": "Charges, Services, Expenses",
@@ -497,7 +509,7 @@
 }, {
   "agency": "Police Department",
   "class": "Charges, Services, Expenses",
-  "amount": 113815707
+  "amount": 109124325
 }, {
   "agency": "Police Department",
   "class": "Social Services",
@@ -517,7 +529,7 @@
 }, {
   "agency": "Admin for Children's Services",
   "class": "Pay, Fringe Benefits",
-  "amount": 462534164
+  "amount": 453945283
 }, {
   "agency": "Admin for Children's Services",
   "class": "Amounts to be Scheduled",
@@ -529,7 +541,7 @@
 }, {
   "agency": "Admin for Children's Services",
   "class": "Charges, Services, Expenses",
-  "amount": 161316777
+  "amount": 158516777
 }, {
   "agency": "Admin for Children's Services",
   "class": "Social Services",
@@ -549,7 +561,7 @@
 }, {
   "agency": "Department of Correction",
   "class": "Property, Equipment, Supplies",
-  "amount": 72354345
+  "amount": 71308470
 }, {
   "agency": "Department of Social Services",
   "class": "Amounts to be Scheduled",
@@ -557,15 +569,15 @@
 }, {
   "agency": "Department of Homeless Services",
   "class": "Pay, Fringe Benefits",
-  "amount": 151809917
+  "amount": 145104594
 }, {
   "agency": "Department of Homeless Services",
   "class": "Charges, Services, Expenses",
-  "amount": 45093289
+  "amount": 40454839
 }, {
   "agency": "Department of Homeless Services",
   "class": "Property, Equipment, Supplies",
-  "amount": 10994214
+  "amount": 9994214
 }, {
   "agency": "Department of Correction",
   "class": "Amounts to be Scheduled",
@@ -577,7 +589,7 @@
 }, {
   "agency": "Department of Correction",
   "class": "Social Services",
-  "amount": 3247951
+  "amount": 2946826
 }, {
   "agency": "Board of Correction",
   "class": "Amounts to be Scheduled",
@@ -593,7 +605,7 @@
 }, {
   "agency": "Pension Contributions",
   "class": "Pay, Fringe Benefits",
-  "amount": 9831152405
+  "amount": 9422235212
 }, {
   "agency": "Miscellaneous",
   "class": "Pay, Fringe Benefits",
@@ -605,7 +617,7 @@
 }, {
   "agency": "Public Advocate",
   "class": "Amounts to be Scheduled",
-  "amount": 358539
+  "amount": -454139
 }, {
   "agency": "Debt Service",
   "class": "Transfers for Debt Service",
@@ -613,11 +625,11 @@
 }, {
   "agency": "Public Advocate",
   "class": "Pay, Fringe Benefits",
-  "amount": 3975790
+  "amount": 3792844
 }, {
   "agency": "Public Advocate",
   "class": "Property, Equipment, Supplies",
-  "amount": 98426
+  "amount": 92428
 }, {
   "agency": "City Council",
   "class": "Property, Equipment, Supplies",
@@ -625,7 +637,7 @@
 }, {
   "agency": "Public Advocate",
   "class": "Charges, Services, Expenses",
-  "amount": 188815
+  "amount": 36597
 }, {
   "agency": "City Council",
   "class": "Pay, Fringe Benefits",
@@ -657,7 +669,7 @@
 }, {
   "agency": "Department for the Aging",
   "class": "Pay, Fringe Benefits",
-  "amount": 30151483
+  "amount": 29889345
 }, {
   "agency": "Department for the Aging",
   "class": "Amounts to be Scheduled",
@@ -689,7 +701,7 @@
 }, {
   "agency": "Financial Information Service Agency",
   "class": "Pay, Fringe Benefits",
-  "amount": 49804565
+  "amount": 49004487
 }, {
   "agency": "Financial Information Service Agency",
   "class": "Amounts to be Scheduled",
@@ -705,7 +717,7 @@
 }, {
   "agency": "Office of Payroll Administration",
   "class": "Pay, Fringe Benefits",
-  "amount": 15528008
+  "amount": 14649875
 }, {
   "agency": "Office of Payroll Administration",
   "class": "Property, Equipment, Supplies",
@@ -733,7 +745,7 @@
 }, {
   "agency": "Equal Employment Practices Commission",
   "class": "Pay, Fringe Benefits",
-  "amount": 914307
+  "amount": 839911
 }, {
   "agency": "Equal Employment Practices Commission",
   "class": "Amounts to be Scheduled",
@@ -762,6 +774,10 @@
   "agency": "Landmarks Preservation Commission",
   "class": "Pay, Fringe Benefits",
   "amount": 5574373
+}, {
+  "agency": "Landmarks Preservation Commission",
+  "class": "Amounts to be Scheduled",
+  "amount": 0
 }, {
   "agency": "Landmarks Preservation Commission",
   "class": "Property, Equipment, Supplies",
@@ -793,7 +809,7 @@
 }, {
   "agency": "Commission on Human Rights",
   "class": "Property, Equipment, Supplies",
-  "amount": 444454
+  "amount": 441354
 }, {
   "agency": "Commission on Human Rights",
   "class": "Charges, Services, Expenses",
@@ -805,15 +821,15 @@
 }, {
   "agency": "Department of Youth & Community Dev",
   "class": "Pay, Fringe Benefits",
-  "amount": 38579397
-}, {
-  "agency": "Department of Youth & Community Dev",
-  "class": "Property, Equipment, Supplies",
-  "amount": 2678844
+  "amount": 37827563
 }, {
   "agency": "Department of Youth & Community Dev",
   "class": "Charges, Services, Expenses",
-  "amount": 40530191
+  "amount": 40372775
+}, {
+  "agency": "Department of Youth & Community Dev",
+  "class": "Property, Equipment, Supplies",
+  "amount": 2675744
 }, {
   "agency": "Department of Youth & Community Dev",
   "class": "Amounts to be Scheduled",
@@ -841,7 +857,7 @@
 }, {
   "agency": "Office of Collective Bargaining",
   "class": "Charges, Services, Expenses",
-  "amount": 43128
+  "amount": 37643
 }, {
   "agency": "Community Board",
   "class": "Pay, Fringe Benefits",
@@ -852,20 +868,24 @@
   "amount": 506235
 }, {
   "agency": "Community Board",
-  "class": "Charges, Services, Expenses",
-  "amount": 3448996
-}, {
-  "agency": "Community Board",
   "class": "Property, Equipment, Supplies",
   "amount": 349173
 }, {
+  "agency": "Community Board",
+  "class": "Charges, Services, Expenses",
+  "amount": 3448996
+}, {
   "agency": "Department of Buildings",
   "class": "Pay, Fringe Benefits",
-  "amount": 129888949
+  "amount": 126801618
 }, {
   "agency": "Department of Probation",
   "class": "Pay, Fringe Benefits",
   "amount": 72645123
+}, {
+  "agency": "Department of Probation",
+  "class": "Amounts to be Scheduled",
+  "amount": -1470238
 }, {
   "agency": "Department of Probation",
   "class": "Property, Equipment, Supplies",
@@ -873,7 +893,7 @@
 }, {
   "agency": "Department of Probation",
   "class": "Charges, Services, Expenses",
-  "amount": 6594831
+  "amount": 2373992
 }, {
   "agency": "Department of Small Business Services",
   "class": "Charges, Services, Expenses",
@@ -884,12 +904,16 @@
   "amount": 25031992
 }, {
   "agency": "Department of Small Business Services",
+  "class": "Amounts to be Scheduled",
+  "amount": 0
+}, {
+  "agency": "Department of Small Business Services",
   "class": "Property, Equipment, Supplies",
   "amount": 583932
 }, {
   "agency": "Housing Preservation & Development",
   "class": "Pay, Fringe Benefits",
-  "amount": 167631455
+  "amount": 166509376
 }, {
   "agency": "Housing Preservation & Development",
   "class": "Amounts to be Scheduled",
@@ -899,9 +923,17 @@
   "class": "Charges, Services, Expenses",
   "amount": 826477847
 }, {
+  "agency": "Department of Health & Mental Hygiene",
+  "class": "Pay, Fringe Benefits",
+  "amount": 443698135
+}, {
   "agency": "Housing Preservation & Development",
   "class": "Property, Equipment, Supplies",
   "amount": 6169109
+}, {
+  "agency": "Department of Health & Mental Hygiene",
+  "class": "Amounts to be Scheduled",
+  "amount": 1534684
 }, {
   "agency": "Department of Buildings",
   "class": "Amounts to be Scheduled",
@@ -915,17 +947,9 @@
   "class": "Charges, Services, Expenses",
   "amount": 1938265
 }, {
-  "agency": "Department of Health & Mental Hygiene",
-  "class": "Pay, Fringe Benefits",
-  "amount": 451225037
-}, {
-  "agency": "Department of Health & Mental Hygiene",
-  "class": "Amounts to be Scheduled",
-  "amount": 1534684
-}, {
   "agency": "Department of Environmental Protection",
   "class": "Pay, Fringe Benefits",
-  "amount": 519734280
+  "amount": 519707856
 }, {
   "agency": "Department of Health & Mental Hygiene",
   "class": "Property, Equipment, Supplies",
@@ -933,19 +957,23 @@
 }, {
   "agency": "Department of Health & Mental Hygiene",
   "class": "Charges, Services, Expenses",
-  "amount": 155043223
+  "amount": 154819368
 }, {
   "agency": "Department of Health & Mental Hygiene",
   "class": "Social Services",
   "amount": 3120816
 }, {
-  "agency": "Office of Admin Trials & Hearings",
-  "class": "Pay, Fringe Benefits",
-  "amount": 30752054
-}, {
   "agency": "Health & Hospitals Corporation",
   "class": "Charges, Services, Expenses",
   "amount": 341814689
+}, {
+  "agency": "Office of Admin Trials & Hearings",
+  "class": "Pay, Fringe Benefits",
+  "amount": 30648221
+}, {
+  "agency": "Office of Admin Trials & Hearings",
+  "class": "Amounts to be Scheduled",
+  "amount": 0
 }, {
   "agency": "Office of Admin Trials & Hearings",
   "class": "Property, Equipment, Supplies",
@@ -960,16 +988,20 @@
   "amount": 5409
 }, {
   "agency": "Department of Environmental Protection",
+  "class": "Charges, Services, Expenses",
+  "amount": 437926523
+}, {
+  "agency": "Department of Environmental Protection",
   "class": "Property, Equipment, Supplies",
   "amount": 123689999
 }, {
-  "agency": "Department of Environmental Protection",
-  "class": "Charges, Services, Expenses",
-  "amount": 463218014
-}, {
   "agency": "Department of Sanitation",
   "class": "Pay, Fringe Benefits",
-  "amount": 963923828
+  "amount": 960614267
+}, {
+  "agency": "Department of Sanitation",
+  "class": "Amounts to be Scheduled",
+  "amount": -1000000
 }, {
   "agency": "Department of Sanitation",
   "class": "Property, Equipment, Supplies",
@@ -977,7 +1009,7 @@
 }, {
   "agency": "Department of Sanitation",
   "class": "Charges, Services, Expenses",
-  "amount": 66690712
+  "amount": 66565712
 }, {
   "agency": "Business Integrity Commission",
   "class": "Pay, Fringe Benefits",
@@ -1001,35 +1033,39 @@
 }, {
   "agency": "Department of Transportation",
   "class": "Pay, Fringe Benefits",
-  "amount": 460957181
+  "amount": 458251541
 }, {
   "agency": "Department of Transportation",
   "class": "Amounts to be Scheduled",
   "amount": 1744124
 }, {
+  "agency": "Department of Transportation",
+  "class": "Property, Equipment, Supplies",
+  "amount": 130868356
+}, {
+  "agency": "Department of Transportation",
+  "class": "Charges, Services, Expenses",
+  "amount": 59067128
+}, {
   "agency": "Department of Consumer Affairs",
   "class": "Amounts to be Scheduled",
   "amount": 11223
 }, {
-  "agency": "Department of Transportation",
-  "class": "Property, Equipment, Supplies",
-  "amount": 133398395
+  "agency": "Department of Consumer Affairs",
+  "class": "Pay, Fringe Benefits",
+  "amount": 26532884
 }, {
-  "agency": "Department of Transportation",
-  "class": "Charges, Services, Expenses",
-  "amount": 63989484
+  "agency": "District Attorney",
+  "class": "Pay, Fringe Benefits",
+  "amount": 306142336
 }, {
   "agency": "Department of Parks & Recreation",
   "class": "Pay, Fringe Benefits",
-  "amount": 374618476
+  "amount": 370566239
 }, {
   "agency": "Department of Parks & Recreation",
   "class": "Amounts to be Scheduled",
   "amount": 9092951
-}, {
-  "agency": "Department of Parks & Recreation",
-  "class": "Charges, Services, Expenses",
-  "amount": 9759607
 }, {
   "agency": "Department of Parks & Recreation",
   "class": "Property, Equipment, Supplies",
@@ -1037,7 +1073,11 @@
 }, {
   "agency": "Department of Design & Construction",
   "class": "Pay, Fringe Benefits",
-  "amount": 114558245
+  "amount": 114507001
+}, {
+  "agency": "Department of Parks & Recreation",
+  "class": "Charges, Services, Expenses",
+  "amount": 9759607
 }, {
   "agency": "Department of Design & Construction",
   "class": "Property, Equipment, Supplies",
@@ -1053,7 +1093,7 @@
 }, {
   "agency": "Department of Citywide Admin Service",
   "class": "Charges, Services, Expenses",
-  "amount": 880394667
+  "amount": 880111181
 }, {
   "agency": "Department of Citywide Admin Service",
   "class": "Property, Equipment, Supplies",
@@ -1061,15 +1101,19 @@
 }, {
   "agency": "Department of Information Technology & Telecommunications",
   "class": "Pay, Fringe Benefits",
-  "amount": 148344926
+  "amount": 140729414
+}, {
+  "agency": "Department of Information Technology & Telecommunications",
+  "class": "Amounts to be Scheduled",
+  "amount": 0
+}, {
+  "agency": "Department of Information Technology & Telecommunications",
+  "class": "Property, Equipment, Supplies",
+  "amount": 3006961
 }, {
   "agency": "Department of Information Technology & Telecommunications",
   "class": "Charges, Services, Expenses",
   "amount": 187129767
-}, {
-  "agency": "Department of Information Technology & Telecommunications",
-  "class": "Property, Equipment, Supplies",
-  "amount": 3016261
 }, {
   "agency": "Department of Records & Information Services",
   "class": "Pay, Fringe Benefits",
@@ -1088,20 +1132,12 @@
   "amount": 1215476
 }, {
   "agency": "Department of Consumer Affairs",
-  "class": "Pay, Fringe Benefits",
-  "amount": 27249466
+  "class": "Property, Equipment, Supplies",
+  "amount": 1066576
 }, {
   "agency": "Department of Consumer Affairs",
   "class": "Charges, Services, Expenses",
   "amount": 11872887
-}, {
-  "agency": "Department of Consumer Affairs",
-  "class": "Property, Equipment, Supplies",
-  "amount": 1066576
-}, {
-  "agency": "District Attorney",
-  "class": "Pay, Fringe Benefits",
-  "amount": 306142336
 }, {
   "agency": "District Attorney",
   "class": "Property, Equipment, Supplies",
