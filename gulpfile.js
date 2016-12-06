@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 
 // Download the open data
 gulp.task('data', function() {
-  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount&$where=financial_plan_amount%3E0&publication_date=20160615'], {
+  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$where=financial_plan_amount%3E0&publication_date=20160615&$limit=1000000'], {
       base: 'https://data.cityofnewyork.us/resource/'
   })
   .pipe(plugins.jsonEditor(function(json){
