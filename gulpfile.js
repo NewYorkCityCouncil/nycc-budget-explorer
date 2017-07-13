@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 
 // Download the open data
 gulp.task('data', function() {
-  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$limit=1000000&$where=intra_city_purchase_code%20IS%20NULL&publication_date=20160615'], {
+  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$limit=1000000&$where=intra_city_purchase_code%20IS%20NULL&publication_date=20170606'], {
       base: 'https://data.cityofnewyork.us/resource/'
   })
   .pipe(plugins.jsonEditor(function(json){
@@ -137,7 +137,7 @@ gulp.task('data', function() {
         if( ['70','07','40','90'].indexOf(object_class_number) != -1 ) { json[k][field] = "Charges, Services, Expenses";}
         if( ['60'].indexOf(object_class_number) != -1 ) { json[k][field] = "Contractual Services";}
         if( ['04','06','01','02','03'].indexOf(object_class_number) != -1 ) { json[k][field] = "Pay, Fringe Benefits";}
-        if( ['30','10'].indexOf(object_class_number) != -1 ) { json[k][field] = "Property, Equipment, Supplies";}
+        if( ['30', '20','10'].indexOf(object_class_number) != -1 ) { json[k][field] = "Property, Equipment, Supplies";}
         if( ['50'].indexOf(object_class_number) != -1 ) { json[k][field] = "Social Services";}
         if( ['80'].indexOf(object_class_number) != -1 ) { json[k][field] = "Transfers for Debt Service";}
       }
