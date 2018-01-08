@@ -47,10 +47,16 @@ gulp.task('watch', function() {
 
 // Download the open data
 gulp.task('data', function() {
-  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$limit=1000000&$where=intra_city_purchase_code%20IS%20NULL&publication_date=20170606'], {
-      base: 'https://data.cityofnewyork.us/resource/'
+  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,publication_date,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$limit=1000000&$where=intra_city_purchase_code%20IS%20NULL'], {
+  base: 'https://data.cityofnewyork.us/resource/'
   })
-  .pipe(plugins.jsonEditor(function(json){
+  .pipe(plugins.jsonEditor(function(rawResponse){
+    var sortedBudgets = rawResponse.sort(function(a,b){
+    return parseInt(b.publication_date)-parseInt(a.publication_date)
+  });
+    var json = rawResponse.filter(function(date){
+    return date.publication_date === sortedBudgets[0].publication_date
+  });
 
     // Function to replace agency_number with agency name
     function combineAgencies(field) {
