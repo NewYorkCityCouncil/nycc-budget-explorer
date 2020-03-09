@@ -1123,23 +1123,23 @@
   "class": "Charges, Services, Expenses",
   "amount": 352237
 }, {
-  "agency": "99C",
+  "agency": "Citywide Savings Initiatives",
   "class": "Pay, Fringe Benefits",
   "amount": -7276610
 }, {
-  "agency": "99C",
+  "agency": "Citywide Savings Initiatives",
   "class": "Charges, Services, Expenses",
   "amount": -23636320
 }, {
-  "agency": "99P",
+  "agency": "Energy Adjustment",
   "class": "Charges, Services, Expenses",
   "amount": 24600243
 }, {
-  "agency": "99S",
+  "agency": "Lease Adjustment",
   "class": "Charges, Services, Expenses",
   "amount": 36973404
 }, {
-  "agency": "817",
+  "agency": "Department of Mental Health",
   "class": "Social Services",
   "amount": 0
 }]

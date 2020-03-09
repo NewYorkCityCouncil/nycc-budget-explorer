@@ -71,6 +71,7 @@ gulp.task('data', function() {
         if( ['103'].indexOf(agencyID) != -1 ) { json[k][field] = "City Clerk";}
         if( ['102'].indexOf(agencyID) != -1 ) { json[k][field] = "City Council";}
         if( ['042'].indexOf(agencyID) != -1 ) { json[k][field] = "City University of New York";}
+        if( ['99C'].indexOf(agencyID) != -1 ) { json[k][field] = "Citywide Savings Initiatives";}
         if( ['134'].indexOf(agencyID) != -1 ) { json[k][field] = 'Civil Service Commission';}
         if( ['054'].indexOf(agencyID) != -1 ) { json[k][field] = 'Civilian Complaint Review Board';}
         if( ['226'].indexOf(agencyID) != -1 ) { json[k][field] = 'Commission on Human Rights';}
@@ -97,6 +98,7 @@ gulp.task('data', function() {
         if( ['071'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Homeless Services";}
         if( ['858'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Information Technology & Telecommunications";}
         if( ['032'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Investigation";}
+        if( ['817'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Mental Health";}
         if( ['846'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Parks & Recreation";}
         if( ['781'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Probation";}
         if( ['860'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Records & Information Services";}
@@ -107,6 +109,7 @@ gulp.task('data', function() {
         if( ['063'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Veterans' Services";}
         if( ['260'].indexOf(agencyID) != -1 ) { json[k][field] = "Department of Youth & Community Dev";}
         if( ['901','902','903','904','905'].indexOf(agencyID) != -1 ) { json[k][field] = "District Attorney";}
+        if( ['99P'].indexOf(agencyID) != -1 ) { json[k][field] = "Energy Adjustment";}
         if( ['133'].indexOf(agencyID) != -1 ) { json[k][field] = "Equal Employment Practices Commission";}
         if( ['127'].indexOf(agencyID) != -1 ) { json[k][field] = "Financial Information Service Agency";}
         if( ['057'].indexOf(agencyID) != -1 ) { json[k][field] = "Fire Department";}
@@ -115,6 +118,7 @@ gulp.task('data', function() {
         if( ['132'].indexOf(agencyID) != -1 ) { json[k][field] = "Independent Budget Office";}
         if( ['136'].indexOf(agencyID) != -1 ) { json[k][field] = "Landmarks Preservation Commission";}
         if( ['025'].indexOf(agencyID) != -1 ) { json[k][field] = "Law Department";}
+        if( ['99S'].indexOf(agencyID) != -1 ) { json[k][field] = "Lease Adjustment"};
         if( ['035','037','038','039'].indexOf(agencyID) != -1 ) { json[k][field] = "Libraries";}
         if( ['002'].indexOf(agencyID) != -1 ) { json[k][field] = "Mayoralty";}
         if( ['098'].indexOf(agencyID) != -1 ) { json[k][field] = "Miscellaneous";}
