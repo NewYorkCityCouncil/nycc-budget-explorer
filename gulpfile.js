@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 
 // Download the open data
 gulp.task('data', function() {
-  plugins.remoteSrc(['66mb-ky9b.json?$select=agency_number,publication_date,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$limit=1000000&$where=intra_city_purchase_code%20IS%20NULL'], {
+  plugins.remoteSrc(['mwzb-yiwb.json?$select=agency_number,publication_date,object_class_number,object_class_name,object_code,object_code_name,budget_code_name,financial_plan_amount,intra_city_purchase_code&$limit=1000000&$where=intra_city_purchase_code%20IS%20NULL'], {
   base: 'https://data.cityofnewyork.us/resource/'
   })
   .pipe(plugins.jsonEditor(function(rawResponse){
@@ -173,14 +173,14 @@ gulp.task('data', function() {
     return groupedData;
 
   }))
-  .pipe(plugins.rename('66mb-ky9b.json'))
+  .pipe(plugins.rename('mwzb-yiwb.json'))
   .pipe(gulp.dest('./assets/data/'))
 });
 
 // Write summary JSON file and HTML files for groups
 gulp.task('summary', function() {
   return gulp.src([
-    './assets/data/66mb-ky9b.json'
+    './assets/data/mwzb-yiwb.json'
   ])
   .pipe(plugins.jsonEditor(function(json){
 
@@ -251,7 +251,7 @@ gulp.task('summary', function() {
       ;
 
       // TODO: Should all the HTML files be deleted before writing new ones (to prevent extras)?
-      fs.writeFile('./assets/html/group-' + k + '.html', objectData);
+      fs.writeFile('./assets/html/group-' + k + '.html', objectData, "utf8", (err) => { err ? console.log(err) : console.log("File was saved") });
 
       // Set the sumary items for the group
       var groupSummary = new Object();
