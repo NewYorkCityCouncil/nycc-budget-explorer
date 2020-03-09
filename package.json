@@ -7,8 +7,7 @@
     "type": "git",
     "url": "git://github.com/NewYorkCityCouncil/nycc-budget-explorer.git"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "devDependencies": {
